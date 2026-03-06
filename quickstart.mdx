@@ -1,89 +1,80 @@
 ---
-title: 5 分钟上手
-description: 从注册到完成第一个任务，只需 5 分钟
+title: "Quickstart"
+description: "Start building awesome documentation in minutes"
 ---
 
-# 5 分钟上手
+## Get started in three steps
 
-## 第一步：注册账号
+Get your documentation site running locally and make your first customization.
 
-访问 [happycapy.ai](https://happycapy.ai)，注册你的账号。
+### Step 1: Set up your local environment
 
-## 第二步：进入工作台
+<AccordionGroup>
+  <Accordion icon="copy" title="Clone your docs locally">
+    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
+    
+    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
+  </Accordion>
+  <Accordion icon="rectangle-terminal" title="Start the preview server">
+    1. Install the Mintlify CLI: `npm i -g mint`
+    2. Navigate to your docs directory and run: `mint dev`
+    3. Open `http://localhost:3000` to see your docs live!
+    
+    <Tip>Your preview updates automatically as you edit files.</Tip>
+  </Accordion>
+</AccordionGroup>
 
-登录后你会看到一个对话界面，这就是你的 AI 工作台。
+### Step 2: Deploy your changes
 
-你的工作台已经预装了：
-- AI 助手（基于 Claude）
-- 96+ 种专业技能
-- 图片/视频/文档等各种工具
+<AccordionGroup>
+  <Accordion icon="github" title="Install our GitHub app">
+    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
+    
+    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
+</Accordion>
+<Accordion icon="palette" title="Update your site name and colors">
+    For a first change, let's update the name and colors of your docs site.
 
-## 第三步：给 AI 下指令
+    1. Open `docs.json` in your editor.
+    2. Change the `"name"` field to your project name.
+    3. Update the `"colors"` to match your brand.
+    4. Save and see your changes instantly at `http://localhost:3000`.
 
-直接用中文描述你想做什么，比如：
+    <Tip>Try changing the primary color to see an immediate difference!</Tip>
+  </Accordion>
+</AccordionGroup>
 
-```
-帮我做一个产品介绍的落地页，主题色用蓝色，
-包含产品特点、价格方案和联系方式
-```
+### Step 3: Go live
 
-AI 会：
-1. 理解你的需求
-2. 自动选择合适的工具和技能
-3. 一步步执行
-4. 把成品交给你
+<Accordion icon="rocket" title="Publish your docs">
+  1. Commit and push your changes.
+  2. Your docs will update and be live in moments!
+</Accordion>
 
-## 第四步：查看和下载结果
+## Next steps
 
-任务完成后，成品会出现在对话中。你可以：
-- 直接预览（网页、图片等）
-- 下载文件（PDF、图片、视频等）
-- 要求 AI 修改（"把标题字号再大一点"）
-
-<Tip>
-如果结果不满意，直接告诉 AI 哪里要改，它会帮你调整。
-</Tip>
-
-## 常见用法
-
-### 做图片
-```
-帮我用 FLUX 模型生成一张赛博朋克风格的城市夜景
-```
-
-### 做视频
-```
-根据这段文字生成一个 15 秒的短视频
-```
-
-### 写文档
-```
-帮我写一份项目周报，包含本周完成的事项和下周计划
-```
-
-### 分析数据
-```
-分析这个 CSV 文件，做出销售趋势图表
-```
-
-### 做 PPT
-```
-把这篇文章的核心观点做成 10 页 PPT
-```
-
-## 进阶教程
+Now that you have your docs running, explore these key features:
 
 <CardGroup cols={2}>
-  <Card title="图片和视频" icon="photo-film" href="/tutorials/media">
-    学习如何生成和编辑图片、视频。
-  </Card>
-  <Card title="文档和数据" icon="table" href="/tutorials/documents">
-    学习如何处理文档、表格和数据分析。
-  </Card>
-  <Card title="网页和设计" icon="browser" href="/tutorials/design">
-    学习如何制作网页、落地页和设计稿。
-  </Card>
-  <Card title="连接外部服务" icon="plug" href="/tutorials/integrations">
-    学习如何连接 GitHub、邮箱、Notion 等服务。
-  </Card>
+
+<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
+  Learn MDX syntax and start writing your documentation.
+</Card>
+
+<Card title="Customize style" icon="palette" href="/essentials/settings">
+  Make your docs match your brand perfectly.
+</Card>
+
+<Card title="Add code examples" icon="square-code" href="/essentials/code">
+  Include syntax-highlighted code blocks.
+</Card>
+
+<Card title="API documentation" icon="code" href="/api-reference/introduction">
+  Auto-generate API docs from OpenAPI specs.
+</Card>
+
 </CardGroup>
+
+<Note>
+  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
+</Note>
