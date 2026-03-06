@@ -1,4 +1,5 @@
 {
+  "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "HappyCapy",
   "colors": {
@@ -6,29 +7,35 @@
     "light": "#38bdf8",
     "dark": "#0284c7"
   },
-  "favicon": "/favicon.svg",
-  "navigation": [
-    {
-      "group": "开始使用",
-      "pages": ["introduction", "quickstart"]
-    },
-    {
-      "group": "使用教程",
-      "pages": [
-        "tutorials/media",
-        "tutorials/documents",
-        "tutorials/design",
-        "tutorials/integrations"
-      ]
-    }
-  ],
-  "navbar": {
-    "links": [
+  "navigation": {
+    "dropdowns": [
       {
-        "label": "HappyCapy",
-        "url": "https://happycapy.ai"
+        "dropdown": "文档",
+        "icon": "book",
+        "groups": [
+          {
+            "group": "开始使用",
+            "pages": ["index", "quickstart"]
+          },
+          {
+            "group": "使用教程",
+            "pages": [
+              "tutorials/media",
+              "tutorials/documents",
+              "tutorials/design",
+              "tutorials/integrations"
+            ]
+          }
+        ]
       }
     ]
+  },
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "开始使用",
+      "href": "https://happycapy.ai"
+    }
   },
   "footer": {
     "socials": {
