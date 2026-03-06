@@ -1,0 +1,33 @@
+{
+  "theme": "mint",
+  "name": "HappyCapy",
+  "colors": {
+    "primary": "#0ea5e9",
+    "light": "#38bdf8",
+    "dark": "#0284c7"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": ["introduction", "quickstart"]
+    },
+    {
+      "group": "Features",
+      "pages": ["features/skills", "features/agents", "features/mcp"]
+    }
+  ],
+  "navbar": {
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Yv3s-y4ng/happycapy-docs"
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/Yv3s-y4ng"
+    }
+  }
+}
