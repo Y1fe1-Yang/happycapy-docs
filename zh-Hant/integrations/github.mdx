@@ -1,0 +1,187 @@
+---
+title: "GitHub 集成"
+description: "將 HappyCapy 連接到 GitHub 進行倉庫管理和自動化"
+---
+
+連接 GitHub 後，HappyCapy 可以協助你管理程式碼倉庫、建立和查看 Issue、處理 Pull Request、查看 CI/CD 狀態等。最棒的是，你只要用自然語言告訴 HappyCapy 想完成什麼即可！
+
+## 取得 GitHub Token
+
+Token 就像是一把鑰匙，讓 HappyCapy 可以代表你操作 GitHub。取得很簡單：
+
+<Steps>
+  <Step title="打開 GitHub Token 設置">
+    訪問 [https://github.com/settings/tokens](https://github.com/settings/tokens)
+
+    或者：在 GitHub 頁面 → 右上角頭像 → Settings → 左側最下方 Developer Settings → Personal access tokens → Tokens (classic)
+  </Step>
+
+  <Step title="生成新 Token">
+    1. 點選 **Generate new token** → 選擇 **Generate new token (classic)**
+    2. 填寫 **Note** 欄位（例如「HappyCapy」）
+    3. **Expiration（有效期）**建議選 "No expiration"（永不過期）
+    4. 選擇權限範圍：
+
+    <Tip>
+    **小白推薦：** 如果是自己使用，可以把所有權限都勾上，省心！如果想精細控制，至少勾選：
+    - `repo`（程式碼倉庫）
+    - `workflow`（GitHub Actions）
+    - `read:org`（讀取組織）
+    </Tip>
+
+    5. 點選頁面底部 **Generate token** 按鈕
+    6. 複製生成的 token（以 `ghp_` 開頭）
+  </Step>
+
+  <Step title="保存您的 Token">
+    <Warning>
+    **重要：** Token 只顯示一次！請立即複製保存到安全的地方（比如密碼管理器）。關閉頁面後就再也看不到了。
+    </Warning>
+  </Step>
+</Steps>
+
+## 如何使用
+
+HappyCapy 最大的優勢是：你不需要記任何命令，直接用自然語言說就行！
+
+### 建立新倉庫
+
+你只需要這樣說：
+
+```
+請幫我建立一個 GitHub 倉庫，名字叫 my-project
+
+我的 GitHub 帳號：https://github.com/你的使用者名
+Token：ghp_你的token
+```
+
+HappyCapy 會自動協助你建立倉庫，設置好基本資訊。
+
+### 整理對話並提交到倉庫
+
+這是最常用的場景！比如你和 HappyCapy 寫了一段程式碼，想保存到 GitHub：
+
+```
+請幫我把這次對話整理成檔案，並提交到我的 GitHub 倉庫
+
+倉庫：https://github.com/你的使用者名/my-project
+Token：ghp_你的token
+```
+
+HappyCapy 會：
+- 整理對話內容
+- 生成合適的檔案結構
+- 提交程式碼到 GitHub
+- 給你返回倉庫連結
+
+### 查看和管理 Issue
+
+查看現有 Issue：
+
+```
+請幫我看看 my-project 倉庫有哪些 Issue
+
+倉庫：https://github.com/你的使用者名/my-project
+Token：ghp_你的token
+```
+
+建立新 Issue：
+
+```
+請幫我在 my-project 倉庫建立一個 Issue
+標題：修復登入按鈕 bug
+內容：使用者點選登入按鈕時沒有反應
+
+Token：ghp_你的token
+```
+
+### 查看 Pull Request
+
+```
+請幫我看看 my-project 有哪些待審核的 PR
+
+Token：ghp_你的token
+```
+
+### 檢查 CI/CD 狀態
+
+```
+請幫我檢查一下 my-project 的最新 workflow 執行狀態
+
+Token：ghp_你的token
+```
+
+## 使用技巧
+
+<AccordionGroup>
+  <Accordion title="Token 只需要提供一次">
+    在同一個對話中，第一次提供 Token 後，後續操作就不需要重複提供了。HappyCapy 會記住你的 Token。
+  </Accordion>
+
+  <Accordion title="可以簡寫倉庫名">
+    如果是你自己的倉庫，可以直接說倉庫名，不用每次都寫完整 URL：
+
+    ```
+    "請幫我看看 my-project 的 Issue"
+    ```
+
+    而不是：
+
+    ```
+    "請幫我看看 https://github.com/username/my-project 的 Issue"
+    ```
+  </Accordion>
+
+  <Accordion title="自然語言的魔力">
+    HappyCapy 理解自然語言，所以你可以：
+    - "請幫我看看最近的提交記錄"
+    - "建立一個 README 檔案並提交"
+    - "檢查一下測試有沒有通過"
+    - "把這個功能的程式碼提交到新分支"
+
+    不需要記命令，像和朋友聊天一樣就行！
+  </Accordion>
+</AccordionGroup>
+
+## 常見問題
+
+<AccordionGroup>
+  <Accordion title="Token 安全嗎？">
+    Token 只在你的會話中使用，不會被儲存或分享給其他人。
+
+    **安全建議：**
+    - 定期更換 Token（比如每 3 個月）
+    - 不要在公開場合分享 Token
+    - 如果懷疑泄露，立即在 GitHub 刪除舊 Token 並生成新的
+  </Accordion>
+
+  <Accordion title="Token 丟了怎麼辦？">
+    沒關係！如果你丟失了 Token：
+    1. 回到 GitHub Token 設置頁面
+    2. 刪除舊的 Token
+    3. 重新生成一個新的
+
+    就這麼簡單！
+  </Accordion>
+
+  <Accordion title="HappyCapy 能幫我做什麼？">
+    HappyCapy 可以處理幾乎所有 GitHub 操作：
+
+    - ✅ 建立/刪除倉庫
+    - ✅ 提交程式碼、建立分支
+    - ✅ 管理 Issue 和 Pull Request
+    - ✅ 查看提交歷史
+    - ✅ 檢查 CI/CD 狀態
+    - ✅ 管理倉庫設置
+
+    只要你能想到的，HappyCapy 都能協助你做！
+  </Accordion>
+</AccordionGroup>
+
+<Card
+  title="還有問題？"
+  icon="question"
+  href="/zh-Hant/integrations/contact"
+>
+  查看常見問題頁面或聯繫支援團隊
+</Card>

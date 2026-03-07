@@ -1,0 +1,358 @@
+---
+title: "非技術人員指南"
+description: "沒有程式背景的專業人士如何利用 HappyCapy 自動化工作流程並提升生產力"
+---
+
+## 適用人群
+
+財務、法務、營銷、運營、產品經理以及其他沒有程式背景的專業人士
+
+## 核心場景
+
+### 場景一:自動化資料工作流
+
+**真實案例:** 財務團隊使用純文字描述工作流,讓 AI 自動執行複雜的資料處理任務。
+
+#### 在 HappyCapy 中如何做
+
+<AccordionGroup>
+  <Accordion icon="comment" title="步驟 1: 用自然語言描述你的工作流">
+    只需解釋你想完成什麼:
+
+    ```
+    每月初,請幫我:
+    1. 讀取上月銷售資料 Excel 表
+    2. 計算每個地區的增長率
+    3. 生成對比圖表
+    4. 創建包含關鍵指標的報告
+    ```
+  </Accordion>
+
+  <Accordion icon="question" title="步驟 2: HappyCapy 會詢問所需輸入">
+    HappyCapy 會主動詢問:
+    - 「請提供 Excel 檔案」
+    - 「需要對比哪個月的資料?」
+  </Accordion>
+
+  <Accordion icon="calendar" title="步驟 3: 儲存為自動化流程(Pro/Max Plan)">
+    - 設定定時任務,每月自動執行
+    - 無需每次重新描述
+  </Accordion>
+</AccordionGroup>
+
+#### 主要優勢
+
+<CardGroup cols={3}>
+  <Card title="無需編碼" icon="ban">
+    無需學習 Excel 公式或程式設計
+  </Card>
+
+  <Card title="可重複使用" icon="repeat">
+    描述一次,反覆使用
+  </Card>
+
+  <Card title="減少錯誤" icon="shield-check">
+    減少人為錯誤
+  </Card>
+</CardGroup>
+
+### 場景二:快速生成營銷材料
+
+**真實案例:** 增長營銷團隊用 HappyCapy 在 15 分鐘內生成數百個廣告文案變體。
+
+#### 在 HappyCapy 中如何做
+
+提供詳細要求進行批量創建:
+
+```
+幫我創建 20 個 Google Ads 廣告變體:
+- 產品: AI 協作工具 HappyCapy
+- 目標受眾: 中小企業主
+- 賣點: 零技術門檻、提高工作效率、雲端運行
+- 標題限制: 30 字元以內
+- 描述限制: 90 字元以內
+```
+
+#### HappyCapy 會做什麼
+
+1. 生成多個創意方向
+2. 自動檢查字元限制
+3. 輸出可直接導入廣告平台的 CSV
+
+**時間節省: 從 2 小時 → 15 分鐘**
+
+### 場景三:文件處理和格式轉換
+
+**真實案例:** 法律團隊快速處理合約並創建自訂工具。
+
+#### 常見用例
+
+<CardGroup cols={2}>
+  <Card title="PDF 轉 Word" icon="file-word">
+    ```
+    幫我將這份 PDF 合約轉換為
+    Word 並提取所有關鍵條款
+    ```
+  </Card>
+
+  <Card title="整理回饋" icon="table">
+    ```
+    將這 10 個客戶回饋整理成
+    對比表格
+    ```
+  </Card>
+
+  <Card title="會議轉寫" icon="microphone">
+    ```
+    將我的會議錄音轉為文字
+    並生成行動清單
+    ```
+  </Card>
+
+  <Card title="格式轉換" icon="rotate">
+    ```
+    將這些 Excel 表格轉換為
+    格式化的 PDF 報告
+    ```
+  </Card>
+</CardGroup>
+
+#### 適用場景
+
+- 合約審查
+- 整理客戶溝通記錄
+- 會議紀要生成
+- 多格式文件轉換
+
+## 給非技術人員的建議
+
+### 1. 從簡單任務開始建立信心
+
+<AccordionGroup>
+  <Accordion icon="image" title="首先嘗試: 基本創建">
+    嘗試簡單任務:「幫我生成一張海報」
+  </Accordion>
+
+  <Accordion icon="chart-line" title="然後嘗試: 資料分析">
+    進階到資料任務:「分析這份資料並製圖」
+  </Accordion>
+
+  <Accordion icon="diagram-project" title="最後嘗試: 複雜工作流">
+    處理更複雜的多步驟工作流
+  </Accordion>
+</AccordionGroup>
+
+### 2. 像與助手聊天一樣描述你的需求
+
+<Columns cols={2}>
+  <div>
+    **不要想:**
+
+    「我應該用什麼工具?」
+    「我該如何程式設計這個?」
+  </div>
+  <div>
+    **只需說:**
+
+    「我想要什麼結果?」
+    「我的最終目標是什麼?」
+  </div>
+</Columns>
+
+<Tip>
+  HappyCapy 會自動為你選擇適當的工具和模型。
+</Tip>
+
+### 3. 保存成功的工作流
+
+當你找到效果好的提示時:
+
+1. **在筆記中記錄有效的提示**
+2. **對於重複任務**,直接複製上次的描述
+3. **Pro/Max 使用者**可以設定自動化,按計劃執行任務
+
+### 4. 不要害怕問「笨」問題
+
+<Note>
+  - HappyCapy 不會評判你
+  - 試錯是學習的一部分
+  - 每次對話都是獨立的,可以隨時重新開始
+</Note>
+
+## 實際範例
+
+### 財務:每月預算報告
+
+```
+幫我創建每月預算與實際支出報告:
+
+1. 讀取 budget.xlsx 和 spending_january.xlsx
+2. 計算每個類別的差異
+3. 用紅色突出顯示超出預算的類別
+4. 創建視覺圖表顯示:
+   - 預算 vs. 實際對比
+   - 已用預算百分比
+5. 生成一頁執行摘要
+```
+
+### 法務:合約分析
+
+```
+分析這 5 份供應商合約並創建對比表:
+
+[上傳合約檔案]
+
+請提取並比較:
+- 合約期限
+- 付款條款
+- 責任條款
+- 終止條件
+- 關鍵義務
+
+創建一個摘要表,幫助我做決策。
+```
+
+### 運營:任務管理
+
+```
+處理我的每週團隊會議記錄:
+
+[貼上會議記錄]
+
+請:
+1. 識別所有行動項目
+2. 根據上下文分配給提到的人
+3. 提取截止日期(或建議合理日期)
+4. 創建表格,列: 任務、負責人、截止日期、狀態
+5. 導出為 CSV 以導入我們的專案管理工具
+```
+
+### 人力資源:候選人篩選
+
+```
+幫我篩選這 20 份簡歷:
+
+[上傳簡歷檔案]
+
+職位要求:
+- 3 年以上專案管理經驗
+- PMP 認證優先
+- 有敏捷方法經驗
+- 強大的溝通能力
+
+請:
+1. 按資格匹配度排名候選人
+2. 突出每個人的關鍵優勢和差距
+3. 創建前 5 名候選人的短名單
+4. 根據他們的背景生成面試問題
+```
+
+## 不同部門的常見工作流
+
+### 財務部門
+
+<AccordionGroup>
+  <Accordion icon="file-invoice" title="發票處理">
+    從發票 PDF 批量提取資料到結構化電子表格
+  </Accordion>
+
+  <Accordion icon="chart-pie" title="財務儀表板">
+    從會計資料創建視覺儀表板
+  </Accordion>
+
+  <Accordion icon="file-contract" title="費用報告">
+    自動化費用報告生成和審批工作流
+  </Accordion>
+
+  <Accordion icon="calculator" title="差異分析">
+    計算並可視化預算 vs. 實際差異
+  </Accordion>
+</AccordionGroup>
+
+### 法務部門
+
+<AccordionGroup>
+  <Accordion icon="file-signature" title="合約審查">
+    提取並比較多份合約的關鍵條款
+  </Accordion>
+
+  <Accordion icon="balance-scale" title="合規檢查">
+    檢查文件是否符合監管要求
+  </Accordion>
+
+  <Accordion icon="magnifying-glass" title="文件搜尋">
+    在案件檔案中搜尋相關先例
+  </Accordion>
+
+  <Accordion icon="file-export" title="模板生成">
+    生成帶有變數欄位的合約模板
+  </Accordion>
+</AccordionGroup>
+
+### 運營
+
+<AccordionGroup>
+  <Accordion icon="clipboard-check" title="流程文件">
+    將會議討論轉換為結構化流程文件
+  </Accordion>
+
+  <Accordion icon="calendar" title="日程優化">
+    分析團隊日曆並建議最佳會議時間
+  </Accordion>
+
+  <Accordion icon="inbox" title="郵件自動化">
+    處理和分類傳入請求
+  </Accordion>
+
+  <Accordion icon="file-excel" title="報告生成">
+    生成每週/每月運營報告
+  </Accordion>
+</AccordionGroup>
+
+## 成功技巧
+
+### 從小處開始並擴大規模
+
+不要一次嘗試自動化所有內容。相反:
+
+1. **選擇一個重複性任務**,每週佔用 30 分鐘以上
+2. **使用 HappyCapy 自動化該單一任務**
+3. **通過 2-3 次迭代完善工作流**
+4. **一旦第一個任務運行順暢,就轉到下一個任務**
+
+### 建立你的提示庫
+
+<Tip>
+  創建一個文件,按任務類型組織你表現最好的提示。這將成為你的個人自動化工具包。
+</Tip>
+
+### 利用模板
+
+一旦你創建了成功的工作流:
+
+- 保存提示結構
+- 每次替換具體細節(日期、檔案名等)
+- 與團隊共享成功的模板
+
+### 要求解釋
+
+如果你想了解 HappyCapy 在做什麼:
+
+```
+請解釋你處理這些資料的每個步驟
+以及為什麼選擇這種方法。
+```
+
+這有助於你學習並改進未來的提示。
+
+## 下一步
+
+<CardGroup cols={2}>
+  <Card title="通用最佳實踐" icon="lightbulb" href="/zh-Hant/best-practices/general">
+    學習適用於所有使用者的通用技巧
+  </Card>
+
+  <Card title="團隊協作" icon="users" href="/zh-Hant/best-practices/team-collaboration">
+    與團隊共享工作流程
+  </Card>
+</CardGroup>

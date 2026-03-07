@@ -1,0 +1,377 @@
+---
+title: "通用最佳實踐"
+description: "適用於所有人的 HappyCapy 有效使用黃金法則"
+---
+
+## 高效使用的黃金法則
+
+### 1. 清楚描述你的目標,而非過程
+
+<Columns cols={2}>
+  <div>
+    **不好的提示:**
+    ```
+    先用 pandas 讀取 CSV,
+    然後用 matplotlib 畫圖
+    ```
+  </div>
+  <div>
+    **好的提示:**
+    ```
+    分析這份銷售資料,生成
+    趨勢圖,告訴我關鍵發現
+    ```
+  </div>
+</Columns>
+
+<Tip>
+  HappyCapy 會自動選擇最佳工具和方法。你只需要說明目標。
+</Tip>
+
+### 2. 提供足夠的上下文
+
+<Columns cols={2}>
+  <div>
+    **不好的提示:**
+    ```
+    請幫我修復這個 bug
+    ```
+  </div>
+  <div>
+    **好的提示:**
+    ```
+    使用者點擊登入按鈕後沒有反應。
+
+    環境:React 18 + TypeScript
+    檔案:src/components/LoginForm.tsx
+    瀏覽器主控台顯示:
+      'Cannot read property of undefined'
+
+    預期行為:點擊後應該發送 API 請求並
+    跳轉到首頁
+
+    請幫我定位問題並修復。
+    ```
+  </div>
+</Columns>
+
+### 3. 迭代式工作,不要要求一次性完美
+
+<Columns cols={2}>
+  <div>
+    **不好的做法:**
+    ```
+    請幫我搭建一個完整的電商網站,包含
+    使用者認證、產品列表、購物車、支付
+    整合、訂單管理、評論系統、推薦
+    算法...
+    ```
+  </div>
+  <div>
+    **好的做法:**
+    ```
+    先請幫我搭建基本框架:
+    - 首頁展示產品列表
+    - 產品詳情頁
+    - 簡單的購物車(無需後端)
+
+    完成後我們再逐步添加功能。
+    ```
+  </div>
+</Columns>
+
+**原則:** 拆解大任務 → 逐步實現 → 每步驗證
+
+### 4. 利用多模態能力
+
+你可以提供多種格式的輸入:
+
+- **截圖**: 直接貼上(Cmd/Ctrl + V)
+- **檔案**: 上傳 PDF、Excel、Word、圖片
+- **網頁連結**: 分享 URL 進行分析
+- **音訊/影片**: 提供媒體進行轉寫和分析
+
+### 5. 保存成功的工作流
+
+當一個提示效果很好時:
+
+1. 記錄下來(複製到筆記)
+2. 標記使用場景
+3. 下次直接複用或微調
+
+<Tip>
+  你可以把成功的工作流自訂為 Skills,所有使用者都可以這樣做!我們鼓勵你建立自己的技能庫,讓重複任務一鍵執行。Pro/Max 使用者還可以設定定時自動化。
+</Tip>
+
+### 6. 定期檢查點,方便回滾
+
+對於長時間任務或實驗性工作:
+
+```
+在實現這個功能前,先讓我確認當前程式碼都保存好了。
+```
+
+**保存策略:**
+- 如果使用 Git: 定期 commit
+- 如果在 HappyCapy 工作區: 定期下載備份
+
+像玩遊戲一樣存檔,出錯時可以輕鬆回滾。
+
+### 7. 明確你的技術水平
+
+在對話開始時說明:
+
+```
+我是設計師,不太懂程式,請用簡單語言解釋。
+```
+
+或:
+
+```
+我是高級開發者,熟悉 React 和 TypeScript。
+你可以直接給我程式碼。
+```
+
+HappyCapy 會調整溝通方式和細緻程度。
+
+### 8. 不要害怕「重新開始」
+
+如果對話方向跑偏了:
+
+<Warning>
+  不要試圖糾正 AI 的錯誤。直接開新對話,重新描述任務。通常比糾正更快。
+</Warning>
+
+像使用「老虎機」:
+1. 保存狀態
+2. 嘗試 30 分鐘
+3. 滿意就接受;不滿意就重來
+
+### 9. 利用 HappyCapy 的技能系統
+
+HappyCapy 支援開源社群的 Skills,涵蓋:
+
+<CardGroup cols={3}>
+  <Card title="圖像與影片" icon="image">
+    生成和編輯
+  </Card>
+  <Card title="文件" icon="file">
+    PDF、Word、Excel、PPT
+  </Card>
+  <Card title="網頁開發" icon="globe">
+    前端和後端
+  </Card>
+  <Card title="資料分析" icon="chart-line">
+    可視化和 ML
+  </Card>
+  <Card title="研究" icon="book">
+    學術論文
+  </Card>
+  <Card title="自動化" icon="bolt">
+    郵件、工作流程
+  </Card>
+</CardGroup>
+
+**如何使用 Skills:**
+
+```
+用 ai-image-generation skill 幫我生成一張科技海報
+```
+
+```
+用 comprehensive-researcher skill 研究
+「大語言模型的最新進展」
+```
+
+在 HappyCapy 對話中輸入 `/help` 查看所有可用 Skills。
+
+### 10. Max Plan 使用者:擁抱「無限」心態
+
+如果你使用 Max Plan:
+
+- 不要擔心 token 用量
+- 大膽嘗試複雜任務
+- 讓 HappyCapy 自主工作更長時間
+- 多次迭代直到滿意
+
+這就是 Max Plan 的價值:零焦慮使用 AI。
+
+## 常見誤區
+
+<AccordionGroup>
+  <Accordion icon="warning" title="誤區 1: AI 應該一次性給我完美結果">
+    **現實:** AI 是協作夥伴,不是魔法棒。
+
+    **正確心態:**
+    - 迭代式工作
+    - 提供回饋
+    - 逐步改進
+  </Accordion>
+
+  <Accordion icon="warning" title="誤區 2: 我的提示不夠「專業」,AI 不會理解">
+    **現實:** 自然語言就是最好的提示。
+
+    **正確方法:**
+    - 像和朋友聊天一樣描述需求
+    - 不需要學習「提示工程」
+    - HappyCapy 會理解你的意圖
+  </Accordion>
+
+  <Accordion icon="warning" title="誤區 3: 我不懂技術,不能用 AI 程式工具">
+    **現實:** HappyCapy 專為非技術人員設計。
+
+    **證據:**
+    - 財務團隊零程式經驗,執行複雜資料工作流
+    - 法律團隊無開發背景,一小時搭建無障礙應用
+    - 產品設計師直接實現前端功能
+  </Accordion>
+</AccordionGroup>
+
+## 不同角色的快速上手
+
+### 非技術人員(3 步)
+
+<AccordionGroup>
+  <Accordion icon="calendar" title="第一週">
+    嘗試簡單任務:「幫我做張海報」、「分析這份 Excel」
+  </Accordion>
+
+  <Accordion icon="calendar" title="第二週">
+    保存有效的提示,建立自己的工作流庫
+  </Accordion>
+
+  <Accordion icon="calendar" title="第三週">
+    設定自動化(Pro/Max),處理重複任務
+  </Accordion>
+</AccordionGroup>
+
+### 開發者(3 步)
+
+<AccordionGroup>
+  <Accordion icon="calendar" title="第一天">
+    用 HappyCapy 理解陌生程式碼庫、生成測試
+  </Accordion>
+
+  <Accordion icon="calendar" title="第一週">
+    讓 HappyCapy 獨立實現小功能,你專注於審查
+  </Accordion>
+
+  <Accordion icon="calendar" title="第一月">
+    建立自驗證循環,讓 HappyCapy 長時間自主工作
+  </Accordion>
+</AccordionGroup>
+
+### 資料分析師(3 步)
+
+<AccordionGroup>
+  <Accordion icon="calendar" title="第一天">
+    上傳資料,讓 HappyCapy 做探索性分析
+  </Accordion>
+
+  <Accordion icon="calendar" title="第一週">
+    讓 HappyCapy 搭建互動式儀表板
+  </Accordion>
+
+  <Accordion icon="calendar" title="第一月">
+    保存常用分析工作流為可複用工具
+  </Accordion>
+</AccordionGroup>
+
+### 行銷人員(3 步)
+
+<AccordionGroup>
+  <Accordion icon="calendar" title="第一天">
+    批量生成文案變體
+  </Accordion>
+
+  <Accordion icon="calendar" title="第一週">
+    自動化廣告創意製作
+  </Accordion>
+
+  <Accordion icon="calendar" title="第一月">
+    連接 MCP 伺服器(Meta Ads、Google Ads),搭建行銷自動化
+  </Accordion>
+</AccordionGroup>
+
+### 產品設計師(3 步)
+
+<AccordionGroup>
+  <Accordion icon="calendar" title="第一天">
+    貼上 mockup,生成前端程式碼原型
+  </Accordion>
+
+  <Accordion icon="calendar" title="第一週">
+    直接實現簡單樣式調整
+  </Accordion>
+
+  <Accordion icon="calendar" title="第一月">
+    搭建設計系統元件庫
+  </Accordion>
+</AccordionGroup>
+
+## 生產力對比
+
+| 任務類型 | 傳統耗時 | HappyCapy 耗時 | 節省時間 |
+|---------|---------|---------------|---------|
+| 調試複雜基礎設施問題 | 10-15 分鐘 | ~5 分鐘 | 50% |
+| 批量生成廣告文案 | 2 小時 | 15 分鐘 | 87% |
+| 理解陌生程式碼庫 | 數小時 | 幾分鐘 | 80-90% |
+| ML 概念研究和學習 | 1 小時 | 10-20 分鐘 | 80% |
+| 創建資料可視化儀表板 | 1-2 天 | 數小時 | 75% |
+| 全局文案修改 | 1 週 | 1 小時 | 95% |
+| 新員工熟悉代碼庫 | 數週 | 數天 | 70% |
+| 設計到前端實現 | 來回數天 | 數小時 | 66% |
+
+**整體生產力提升:2-4 倍**
+
+## 最後建議
+
+### 記住核心理念
+
+<Note>
+  - AI 應該為每個人服務 - 不僅僅是開發者
+  - 專注於「你想要什麼」- 而非「如何做」
+  - 零焦慮使用 - Max Plan 無限使用量
+  - 像水豚一樣悠閒 - 放鬆、友好、與每個人都能相處融洽
+</Note>
+
+### 你不需要:
+
+- 學習命令列
+- 理解程式設計
+- 配置複雜環境
+- 記憶提示工程技巧
+- 擔心使用限制(Max Plan)
+
+### 你只需要:
+
+- 說出你想做什麼
+- 信任 HappyCapy 選擇合適的工具
+- 迭代式工作,逐步改進
+- 享受 AI 帶來的生產力躍升
+
+## 需要幫助?
+
+<CardGroup cols={2}>
+  <Card title="加入 Discord" icon="discord" href="https://discord.gg/N3vdDbvsF8">
+    與社群交流
+  </Card>
+
+  <Card title="電子郵件支援" icon="envelope" href="mailto:support@happycapy.ai">
+    從我們的團隊獲得幫助
+  </Card>
+
+  <Card title="官方網站" icon="globe" href="https://happycapy.ai/">
+    了解更多關於 HappyCapy
+  </Card>
+
+  <Card title="預約演示" icon="calendar" href="https://calendly.com/trickle-booking/happycapy-walkthrough">
+    獲取個性化演示
+  </Card>
+</CardGroup>
+
+---
+
+**HappyCapy, HappyYou**
+
+讓 AI 成為你最強大的助手,回歸工作的樂趣。

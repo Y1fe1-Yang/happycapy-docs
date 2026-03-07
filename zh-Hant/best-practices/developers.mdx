@@ -1,0 +1,342 @@
+---
+title: "開發者指南"
+description: "開發者如何高效使用 HappyCapy 進行快速原型開發、調試、測試和程式碼探索"
+---
+
+## 適用人群
+
+軟體工程師、資料工程師、DevOps、安全工程師
+
+## 核心場景
+
+### 場景一:快速原型開發(自動接受模式)
+
+**真實案例:** 產品團隊用「自動接受模式」讓 AI 自主構建 Vim 模式,70% 程式碼由 AI 完成。
+
+#### 在 HappyCapy 中如何做
+
+<AccordionGroup>
+  <Accordion icon="code" title="步驟 1: 確保從乾淨的 Git 狀態開始">
+    在開始之前確保工作目錄乾淨:
+
+    ```bash
+    git status  # 確認沒有未提交的更改
+    git checkout -b feature/new-prototype
+    ```
+  </Accordion>
+
+  <Accordion icon="list" title="步驟 2: 給出詳細但抽象的任務">
+    描述你想要什麼,而不是如何構建:
+
+    ```
+    請幫我實現一個使用者認證系統:
+    - 支援郵箱 + 密碼登入
+    - JWT token 認證
+    - 包含註冊、登入、密碼重置
+    - 寫好單元測試
+    - 邊做邊執行測試,遇到錯誤自己修復
+    ```
+  </Accordion>
+
+  <Accordion icon="check" title="步驟 3: 定期檢查進度,80% 完成時接管">
+    - HappyCapy 自動執行測試並修復錯誤
+    - 你專注於核心業務邏輯的最後 20%
+  </Accordion>
+</AccordionGroup>
+
+#### 最佳實踐
+
+<CardGroup cols={2}>
+  <Card title="適合" icon="check">
+    - 邊緣功能
+    - 實驗性原型
+    - 不熟悉的技術棧
+  </Card>
+
+  <Card title="不適合" icon="xmark">
+    - 核心業務邏輯
+    - 安全關鍵程式碼
+  </Card>
+</CardGroup>
+
+<Tip>
+  每個階段都提交 Git 檢查點,方便需要時回滾。
+</Tip>
+
+### 場景二:調試複雜問題
+
+**真實案例:** 安全團隊將事故解決時間從 10-15 分鐘縮短到 5 分鐘。
+
+#### 在 HappyCapy 中如何做
+
+提供全面的上下文以加快調試:
+
+```
+這是我遇到的錯誤:
+[貼上堆棧跟蹤]
+
+這是相關文件:
+[上傳或貼上文件]
+
+請幫我:
+1. 追蹤控制流,找出問題根源
+2. 解釋為什麼會出現這個錯誤
+3. 給出修復方案,並說明可能的副作用
+```
+
+#### HappyCapy 的優勢
+
+<CardGroup cols={2}>
+  <Card title="自動程式碼閱讀" icon="magnifying-glass">
+    自動讀取相關程式碼檔案
+  </Card>
+
+  <Card title="堆棧理解" icon="brain">
+    理解複雜的呼叫棧
+  </Card>
+
+  <Card title="可執行修復" icon="wrench">
+    提供可直接執行的修復程式碼
+  </Card>
+
+  <Card title="文件" icon="book">
+    生成 runbook 供將來參考
+  </Card>
+</CardGroup>
+
+**時間節省: 50%**
+
+### 場景三:測試驅動開發(TDD)
+
+**真實案例:** 推理團隊通過 AI 生成全面的單元測試,自動覆蓋邊界情況。
+
+#### 在 HappyCapy 中如何做
+
+遵循 TDD 紅-綠-重構循環:
+
+```
+我要實現一個 `calculateDiscount(price, userType)` 函數。
+
+先請幫我寫測試用例,考慮:
+- 正常情況(普通使用者、VIP 使用者)
+- 邊界情況(價格為 0、負數、超大金額)
+- 異常情況(無效使用者類型、缺少參數)
+
+然後再寫實現程式碼,確保所有測試通過。
+```
+
+#### TDD 工作流
+
+1. **HappyCapy 先寫測試**(TDD 紅燈)
+2. **然後寫實現**(TDD 綠燈)
+3. **自動執行測試**並修復發現的問題
+4. **你審查程式碼**並做最終優化
+
+#### 效果
+
+- 測試覆蓋更全面
+- 減少遺漏邊界情況
+- 程式碼質量更高
+
+### 場景四:快速理解陌生程式碼庫
+
+**真實案例:** API 團隊把程式碼庫探索作為「第一站」,大幅減少上下文收集時間。
+
+#### 在 HappyCapy 中如何做
+
+請求程式碼庫的引導式遊覽:
+
+```
+我需要修復使用者登入的一個 bug,但不熟悉這部分程式碼。
+
+請幫我:
+1. 找出處理使用者登入的所有相關檔案
+2. 解釋登入流程的主要步驟
+3. 識別哪些檔案負責認證、會話管理、錯誤處理
+4. 告訴我如果要修改登入邏輯,需要改哪些檔案
+```
+
+#### HappyCapy 會做什麼
+
+<CardGroup cols={2}>
+  <Card title="架構圖" icon="sitemap">
+    生成程式碼庫架構圖
+  </Card>
+
+  <Card title="依賴關係" icon="link">
+    展示檔案之間的依賴關係
+  </Card>
+
+  <Card title="簡單解釋" icon="comments">
+    用簡單語言解釋複雜邏輯
+  </Card>
+
+  <Card title="精確定位" icon="location-dot">
+    直接定位到關鍵程式碼行(file.ts:123)
+  </Card>
+</CardGroup>
+
+**時間節省: 從數小時 → 幾分鐘**
+
+### 場景五:安全審查與基礎設施變更
+
+**真實案例:** 安全團隊通過 AI 快速審查 Terraform 計劃。
+
+#### 在 HappyCapy 中如何做
+
+<AccordionGroup>
+  <Accordion icon="code" title="生成 Terraform 計劃">
+    首先,在本地生成計劃:
+
+    ```bash
+    terraform plan -out=tfplan
+    terraform show -json tfplan > plan.json
+    ```
+  </Accordion>
+
+  <Accordion icon="upload" title="上傳並請求審查">
+    上傳到 HappyCapy 並詢問:
+
+    ```
+    審查這個 Terraform 計劃,告訴我:
+    1. 會建立/修改/刪除哪些資源?
+    2. 有沒有安全風險?
+    3. 有沒有可能導致停機的操作?
+    4. 我會後悔嗎? 😅
+    ```
+  </Accordion>
+</AccordionGroup>
+
+#### HappyCapy 協助你
+
+- 識別高風險操作(刪除資料庫、修改防火牆規則)
+- 檢查權限設定是否符合最佳實踐
+- 生成審查清單
+- 建議更安全的替代方案
+
+## 給開發者的建議
+
+### 1. 建立自驗證循環
+
+創建包含自動驗證的提示:
+
+```
+在實現這個功能時:
+- 寫完程式碼後自動執行測試
+- 執行 lint 檢查程式碼風格
+- 如果測試失敗,自己分析原因並修復
+- 最後給我一份測試通過的程式碼
+```
+
+### 2. 培養任務分類直覺
+
+<Columns cols={2}>
+  <div>
+    **異步自主**
+    - 邊緣功能
+    - 原型
+    - 不熟悉的技術
+  </div>
+  <div>
+    **同步監督**
+    - 核心業務邏輯
+    - 安全關鍵程式碼
+    - 生產環境
+  </div>
+</Columns>
+
+### 3. 寫清晰詳細的提示
+
+<Note>
+  - 當程式碼庫有相似命名時,給出明確的檔案路徑
+  - 說明你的編碼風格偏好(如「用函數式編程,避免類」)
+  - 提供上下文(如「這個專案用 TypeScript + React + Zustand」)
+</Note>
+
+### 4. 利用多實例並行工作
+
+HappyCapy 支援多個標籤頁,每個標籤頁是獨立會話:
+
+- 一個標籤頁處理前端,另一個處理後端
+- 每個會話保持完整上下文
+- 切換無壓力
+
+### 5. 像用「老虎機」一樣對待重構任務
+
+<AccordionGroup>
+  <Accordion icon="save" title="步驟 1: 保存當前狀態">
+    ```bash
+    git commit -m "checkpoint before refactoring"
+    ```
+  </Accordion>
+
+  <Accordion icon="robot" title="步驟 2: 讓 HappyCapy 工作">
+    讓 HappyCapy 自主工作 30 分鐘
+  </Accordion>
+
+  <Accordion icon="check" title="步驟 3: 評估結果">
+    - 如果結果滿意,接受它
+    - 如果不滿意,重新開始:
+      ```bash
+      git reset --hard HEAD~1
+      ```
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  重新開始往往比糾正錯誤成功率更高。
+</Tip>
+
+## 範例用例
+
+### 快速創建 API 端點
+
+```
+創建一個新的 REST API 端點:
+- 路徑: POST /api/users/forgot-password
+- 接受請求正文中的電子郵件
+- 生成安全的重置令牌
+- 發送帶有重置連結的電子郵件
+- 添加速率限制(每個電子郵件每小時 5 個請求)
+- 寫整合測試
+- 更新 API 文件
+```
+
+### 程式碼質量改進
+
+```
+審查並改進 src/utils/validation.ts 的程式碼質量:
+1. 添加 TypeScript 類型以提高類型安全性
+2. 為公共函數添加 JSDoc 註釋
+3. 重構重複的驗證邏輯
+4. 為邊界情況添加單元測試
+5. 確保一致的錯誤處理
+```
+
+### 遷移到新框架
+
+```
+我需要將這個 React class 元件遷移到使用 hooks 的
+函數元件:
+
+[貼上元件程式碼]
+
+要求:
+- 轉換為使用 hooks 的函數元件
+- 保持所有現有功能
+- 使用現代 React 模式
+- 添加 TypeScript 類型
+- 保持相同的 prop 介面
+```
+
+## 下一步
+
+<CardGroup cols={2}>
+  <Card title="通用最佳實踐" icon="lightbulb" href="/zh-Hant/best-practices/general">
+    學習適用於所有使用者的通用技巧
+  </Card>
+
+  <Card title="團隊協作" icon="users" href="/zh-Hant/best-practices/team-collaboration">
+    了解如何與團隊共享工作流程
+  </Card>
+</CardGroup>

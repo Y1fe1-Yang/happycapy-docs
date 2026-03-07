@@ -1,0 +1,175 @@
+---
+title: "常見問題"
+description: "關於 HappyCapy 安全性、功能和使用的常見問題"
+---
+
+## 常見問題
+
+<AccordionGroup>
+  <Accordion icon="shield-check" title="我的資料安全嗎?隱私會被泄露嗎?">
+    你的隱私和資料安全是我們的首要關注:
+
+    ### 本地優先
+    你的檔案只有在你主動上傳時纔會到達雲端沙盒環境,不會影響你的本地系統。
+
+    ### 沙盒隔離
+    所有程式碼在獨立的沙盒環境中執行,與你的主系統完全隔離,確保安全無虞。
+
+    ### 透明可控
+    AI 的每一步操作都清晰可見。你可以隨時查看、暫停或修改。
+
+    ### 權限自主
+    連接第三方服務(GitHub、Notion 等)時,所有權限由你授權,隨時可以撤銷。
+  </Accordion>
+
+  <Accordion icon="brain" title="HappyCapy 支援哪些 AI 模型?">
+    HappyCapy 可以使用市面上幾乎所有主流 AI 模型:
+
+    ### 對話模型
+    - Claude (Opus, Sonnet, Haiku)
+    - GPT-4 系列
+    - Gemini 3.0 Pro
+    - Llama
+    - Mixtral
+    - 等更多
+
+    ### 圖像生成
+    - FLUX
+    - Stable Diffusion
+    - DALL-E
+    - Midjourney
+    - 等更多
+
+    ### 影片生成
+    - Veo 3.1
+    - Seedance
+    - MiniMax
+    - Kling
+    - Runway
+    - 等更多
+
+    ### 音頻處理
+    - Whisper
+    - ElevenLabs
+    - Suno
+    - 等更多
+
+    <Tip>
+      **另外**:你不用再一直追著最新模型。HappyCapy 會自動更新支援最新發布的模型,你隨時都能用上最前沿的 AI 技術。
+    </Tip>
+  </Accordion>
+
+  <Accordion icon="file-arrow-up" title="可以處理多大的檔案?">
+    HappyCapy 可以處理各種大小的檔案,但處理大檔案時,我們推薦這樣做:
+
+    ### 小檔案 (< 50MB)
+    直接上傳到對話框即可。
+
+    ### 大檔案 (> 50MB)
+    為了更好的性能:
+    1. 先上傳到 GitHub
+    2. 讓 HappyCapy 從雲端下載
+
+    這樣更快更穩定。
+
+    <Note>
+      **GitHub 集成提示**:生成一個 GitHub Token,HappyCapy 就能協助你下載、上傳、管理檔案。詳細說明請參見我們的 GitHub 集成指南。
+    </Note>
+  </Accordion>
+
+  <Accordion icon="dollar-sign" title="有哪些價格方案?">
+    HappyCapy 提供靈活的方案以滿足不同需求:
+
+    ### 免費版
+    每月有限使用量,可以探索 HappyCapy 的功能。
+
+    ### Pro 方案
+    為普通用戶提供充裕的 token 限額。
+
+    ### Max 方案
+    **無限 token**——無焦慮創作。非常適合重度用戶、創作者和專業人士,讓你專注於工作本身,而不是 token 計數。
+
+    訪問 [happycapy.ai/pricing](https://happycapy.ai/pricing) 查看當前價格詳情。
+  </Accordion>
+
+  <Accordion icon="globe" title="可以在行動裝置上使用 HappyCapy 嗎?">
+    可以!HappyCapy 完全在瀏覽器中執行,你可以從以下裝置訪問:
+
+    - 桌面電腦 (Windows、Mac、Linux)
+    - 平板電腦 (iPad、Android 平板)
+    - 智慧型手機 (iOS、Android)
+
+    介面會適配你的螢幕尺寸,不過某些複雜任務在大螢幕上操作更方便。
+  </Accordion>
+
+  <Accordion icon="language" title="HappyCapy 支援哪些語言?">
+    HappyCapy 支援多種對話語言:
+
+    - 英語
+    - 中文(簡體和繁體)
+    - 日語
+    - 韓語
+    - 西班牙語
+    - 法語
+    - 德語
+    - 等更多
+
+    只需用你喜歡的語言與 HappyCapy 對話,它會相應地回應。
+  </Accordion>
+
+  <Accordion icon="plug" title="可以將 HappyCapy 與其他工具集成嗎?">
+    可以!HappyCapy 支援與熱門服務集成:
+
+    - **GitHub**:倉庫管理、檔案上傳、版本控制
+    - **Notion**:檔案管理和協作
+    - **Gmail**:電子郵件處理和自動化
+    - **Google Drive**:雲端儲存集成
+    - 更多集成即將推出
+
+    所有集成都需要你的授權,可以從設定中管理。
+  </Accordion>
+
+  <Accordion icon="code" title="使用 HappyCapy 需要編程知識嗎?">
+    **不需要編程知識!**
+
+    HappyCapy 為所有人設計,無論技術背景如何。你用自然語言與 HappyCapy 溝通,就像和朋友聊天一樣。
+
+    不過,如果你有編程知識,你可以:
+    - 給出更技術性的指示
+    - 要求特定的實現
+    - 審查和修改生成的程式碼
+
+    HappyCapy 會適應你的專業水平。
+  </Accordion>
+
+  <Accordion icon="clock" title="檔案會在工作區保留多久?">
+    你的 HappyCapy 工作區中的檔案是持久的:
+
+    - **上傳的檔案**:保留在 `uploads/` 直到你刪除
+    - **生成的輸出**:保留在 `outputs/` 直到你刪除
+    - **Desktop 會話**:自動保存,隨時可訪問
+
+    你對檔案有完全控制權,可以隨時刪除。
+  </Accordion>
+
+  <Accordion icon="life-ring" title="如果我需要幫助或遇到問題怎麼辦?">
+    我們隨時為你提供協助!你可以:
+
+    - **文檔**:瀏覽我們的綜合指南
+    - **社群**:加入我們的 Discord 社群獲得同儕支援
+    - **電子郵件支援**:聯繫 support@happycapy.ai
+    - **應用內幫助**:點選幫助按鈕獲取情境協助
+
+    對於 Max 方案用戶,我們提供優先支援,回應時間更快。
+  </Accordion>
+</AccordionGroup>
+
+## 還有其他問題?
+
+<Card
+  title="聯繫支援"
+  icon="envelope"
+  href="mailto:support@happycapy.ai"
+>
+  透過 support@happycapy.ai 聯繫我們的團隊
+</Card>
