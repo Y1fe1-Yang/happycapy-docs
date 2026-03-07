@@ -1,0 +1,119 @@
+---
+title: "从实习生到开源 — 构建 7x24 Telegram Bot 技能"
+description: "一位 HappyCapy 实习生如何构建了一个开源 Telegram Bot 技能，具备 4 层容错、AI 对话和一键部署"
+---
+
+<img src="/images/use-cases/telegram-bot-repo.png" alt="Telegram Bot Skill GitHub 仓库" style={{ borderRadius: '12px', marginBottom: '24px' }} />
+
+## 背景
+
+**用户**：喜多（HappyCapy 实习生，[Lucky-Dog07](https://github.com/Lucky-Dog07)）
+
+喜多是 HappyCapy 的一名实习生，受到 gffi 的 Discord Bot 文章启发，决定为 Telegram 构建类似的解决方案 — 但她更进一步，设计了 4 层容错系统，并将一切开源为可安装的 HappyCapy 技能。
+
+> "这个项目的前身是 gffi 大佬的《在 HappyCapy 沙箱中搭建一个 7x24 运行的 Discord Bot》。Telegram Bot 最初参考了该架构，后来逐步发展出了自己的体系。"
+> — 喜多
+
+## 她构建了什么
+
+### 一个 7x24 Telegram Bot 技能
+
+一个开源的、一键部署的 Telegram 机器人，运行在 HappyCapy 沙箱中，具备 AI 对话、图片分析和持久记忆能力。
+
+<Card
+  title="在 GitHub 上查看"
+  icon="github"
+  href="https://github.com/Lucky-Dog07/telegram-bot-skill"
+>
+  telegram-bot-skill — 7x24 AI 驱动的 HappyCapy Telegram Bot
+</Card>
+
+### 与 Discord Bot 的关键技术差异
+
+Discord 机器人依赖 WebSocket 连接（需要 discord.js 及 70+ 依赖），而喜多的 Telegram 机器人使用 **HTTP 长轮询** — 原生 `fetch` API，零 npm 依赖。这使其更轻量、更适合沙箱环境。
+
+### 4 层容错架构
+
+机器人具备强大的 4 层恢复系统，在 gffi 的 3 层设计基础上进化：
+
+<Steps>
+  <Step title="自动恢复引导层">
+    使用 `.zshenv` 在每次沙箱会话启动时触发 `start-bot.sh` — 因为 `.bashrc` 在 HappyCapy 的 zsh 环境中不起作用
+  </Step>
+
+  <Step title="第 1 层：Supervisord">
+    进程管理器，配合动态配置注入 — 因为 `/etc/supervisord.conf` 在沙箱重启后会被重置，脚本每次都重新生成配置
+  </Step>
+
+  <Step title="第 2 层：看门狗">
+    自定义健康监控，检查机器人状态并在需要时重启
+  </Step>
+
+  <Step title="第 3 层：Bot 引擎">
+    Telegram 机器人本体，集成 AI Gateway 实现 Claude 驱动的对话
+  </Step>
+</Steps>
+
+另外还有两个独立系统：
+- **监控器**（`monitor.sh`）：每 10 分钟进行一次健康检查
+- **自动同步**：每 30 分钟 Git 推送，备份对话记录
+
+### 功能特性
+
+<CardGroup cols={2}>
+  <Card title="AI 对话" icon="robot">
+    通过 HappyCapy AI Gateway 接入 Claude — 支持多种模型选择
+  </Card>
+
+  <Card title="图片分析" icon="image">
+    多模态能力 — 发送图片即可获得 AI 分析
+  </Card>
+
+  <Card title="持久记忆" icon="database">
+    每个聊天独立的对话历史，通过 Git 同步在沙箱重启后保留
+  </Card>
+
+  <Card title="一键部署" icon="terminal">
+    单条 bash 命令即可部署：配置 token、项目目录、管理员 ID 和模型选择
+  </Card>
+</CardGroup>
+
+### 解决的真实工程难题
+
+喜多的文章记录了真实的调试过程 — 而不仅仅是最终方案：
+
+- **`.bashrc` 不起作用**：HappyCapy 使用 zsh 而非 bash — 改用 `.zshenv`
+- **Supervisord 配置被重置**：`/etc/supervisord.conf` 在重启后不持久 — 用动态配置生成解决
+- **长轮询冲突**：Telegram 拒绝多个轮询连接 — 需要精细的进程管理
+- **没有 cron**：使用 shell 循环实现自定义定时任务
+- **路径问题**：`PROJECT_ROOT` 解析失败 — 用绝对路径注入修复
+
+## 坦诚的态度
+
+喜多文章的亮点在于她的坦诚。她公开表示真正的 7x24 运行尚未完全实现 — 机器人只在用户打开 HappyCapy 会话时自动重启，而非独立运行。这种透明度对社区很有价值。
+
+> "说实话，7x24 还没有完全实现。但架构是扎实的，自动恢复在会话范围内运行可靠。"
+
+## 关键启示
+
+<CardGroup cols={2}>
+  <Card title="开源优先" icon="code-branch">
+    作为可安装的 HappyCapy 技能构建 — 任何人都可以一键部署自己的 Telegram 机器人
+  </Card>
+
+  <Card title="零依赖" icon="feather">
+    HTTP 长轮询配合原生 fetch — Telegram API 无需任何 npm 包
+  </Card>
+
+  <Card title="站在巨人肩上" icon="users">
+    基于 gffi 的 Discord Bot 工作，进一步演化架构 — 社区知识不断积累
+  </Card>
+
+  <Card title="透明的工程实践" icon="magnifying-glass">
+    坦诚记录失败和局限 — 真实的调试故事，而非只展示光鲜的结果
+  </Card>
+</CardGroup>
+
+<Tip>
+喜多的项目展示了 HappyCapy 社区的力量：一位用户的博客文章（gffi 的 Discord Bot）启发了一名实习生为不同平台构建了改进的开源版本。这就是社区知识的复利效应 — 每一次贡献都为下一次提高了起点。
+</Tip>
