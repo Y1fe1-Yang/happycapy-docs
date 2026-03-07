@@ -1,0 +1,141 @@
+---
+title: "Notion 集成"
+description: "将 HappyCapy 连接到 Notion 实现自动化笔记和文档管理"
+---
+
+连接 Notion 后,HappyCapy 可以帮你读取、编辑、创建 Notion 页面,自动整理笔记,生成文档等。
+
+## 获取 Notion Token
+
+按照以下 4 个步骤设置您的 Notion 集成:
+
+<Steps>
+  <Step title="创建 Notion Integration">
+    1. 访问 [https://www.notion.so/my-integrations](https://www.notion.so/my-integrations)
+    2. 点击 **+ New integration** 按钮
+    3. 填写 Integration 信息:
+       - **Name(名称):** 随便写,比如 "HappyCapy"
+       - **Associated workspace:** 选择你的工作区
+       - **Capabilities(能力):** 默认即可(Read content, Update content, Insert content)
+    4. 创建后,复制 **Internal Integration Token**(看起来像:`ntn_xxxxxxxxxxxx`)
+  </Step>
+
+  <Step title="给 Integration 授权访问页面">
+    <Warning>
+    **关键步骤:** 获取 Token 后还需要给 Integration 授权!
+    </Warning>
+
+    对于每个你想让 HappyCapy 访问的页面:
+    1. 在 Notion 中打开页面
+    2. 点击右上角的 **···** 按钮
+    3. 选择 **Connections** → 找到你的 Integration(如 "HappyCapy")
+    4. 点击确认授权
+
+    <Tip>
+    每个想让 HappyCapy 访问的页面都需要单独授权。如果页面有子页面,子页面会自动继承权限。
+    </Tip>
+  </Step>
+
+  <Step title="获取页面 ID">
+    要操作 Notion 页面,还需要知道页面的 ID:
+
+    1. 打开你的 Notion 页面
+    2. 查看浏览器地址栏的 URL
+    3. URL 最后一段(32 位字符)就是页面 ID
+
+    **例如:**
+    ```
+    https://www.notion.so/My-Page-3065ab5584b5803e8572fcb253106e5a
+    ```
+
+    页面 ID 就是:`3065ab5584b5803e8572fcb253106e5a`
+  </Step>
+
+  <Step title="在 HappyCapy 中使用">
+    现在你已经准备好在 HappyCapy 中使用 Notion 了!只需提供你的 Token 和页面链接或 ID。
+  </Step>
+</Steps>
+
+## 如何在 HappyCapy 中使用
+
+准备好 Token 和页面 ID 后,你可以这样与 Notion 交互:
+
+### 读取 Notion 页面
+
+```
+读取我的 Notion 页面
+
+Token:ntn_你的token
+页面链接:https://www.notion.so/你的页面链接
+```
+
+### 更新页面内容
+
+```
+帮我更新 Notion 页面的内容
+
+Token:ntn_你的token
+页面 ID:3065ab5584b5803e8572fcb253106e5a
+新内容:[你想添加的内容]
+```
+
+HappyCapy 会自动帮你完成操作!
+
+## 使用示例
+
+<CardGroup cols={2}>
+  <Card title="读取页面" icon="book-open">
+    "帮我读取这个 Notion 页面的内容"
+  </Card>
+  <Card title="创建页面" icon="file-plus">
+    "帮我在 Notion 中创建一个新页面"
+  </Card>
+  <Card title="整理笔记" icon="list-check">
+    "把这段对话整理成 Notion 页面"
+  </Card>
+  <Card title="批量操作" icon="layer-group">
+    "帮我批量更新这些 Notion 页面"
+  </Card>
+</CardGroup>
+
+## 常见问题
+
+<AccordionGroup>
+  <Accordion title='为什么提示 "page not found"?'>
+    检查是否完成了页面授权。记得在页面的 **Connections** 中添加你的 Integration!
+
+    常见原因:
+    - Integration 未添加到特定页面
+    - 页面 ID 错误
+    - Integration 被删除或 Token 重新生成
+  </Accordion>
+
+  <Accordion title="子页面也需要授权吗?">
+    如果父页面已经授权,子页面会自动继承权限。但如果子页面是单独创建的(不是作为子页面),需要单独授权。
+  </Accordion>
+
+  <Accordion title="Token 会过期吗?">
+    Notion 的 Integration Token 不会过期,除非你手动删除或重新生成。只要在 Notion 设置中保持活动状态,你就可以无限期使用同一个 Token。
+  </Accordion>
+
+  <Accordion title="可以使用多个工作区吗?">
+    可以!你可以为不同的工作区创建单独的 Integration。每个工作区需要自己的 Integration 和 Token。
+  </Accordion>
+</AccordionGroup>
+
+## 安全最佳实践
+
+<Note>
+- 只为 Integration 授权需要访问的页面
+- 定期在 Notion 设置中检查授权的页面
+- 不要公开分享你的 Token
+- 如果怀疑 Token 泄露,立即在 Notion 集成设置中重新生成
+</Note>
+
+<Card
+  title="需要帮助?"
+  icon="question"
+  href="/zh/integrations/contact"
+>
+  联系我们的支持团队获取 Notion 集成帮助
+</Card>

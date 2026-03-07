@@ -1,0 +1,144 @@
+---
+title: "快速上手"
+description: "几分钟内开始使用 HappyCapy"
+---
+
+## 第一步:打开 HappyCapy
+
+访问 [happycapy.ai](https://happycapy.ai),注册并登录后,你会看到主界面:
+
+<Columns cols={3}>
+  <div>
+    **左侧边栏**
+    - Desktops
+    - Skills
+    - Automations
+    - Skill Store
+  </div>
+  <div>
+    **对话区**
+    - 与 HappyCapy 聊天
+    - 查看生成的内容
+    - 监控进度
+  </div>
+  <div>
+    **文件管理**
+    - `uploads/` 文件夹
+    - `outputs/` 文件夹
+    - 上传按钮 (+)
+  </div>
+</Columns>
+
+## 第一次对话
+
+别紧张,就像和朋友聊天一样。
+
+在底部的输入框里,试试这句话:
+
+```
+画一只可爱的卡皮巴拉,漫画风格
+```
+
+按回车,看着 HappyCapy 帮你生成图片。
+
+或者试试:
+
+```
+生成不同美术风格的可爱卡皮巴拉
+```
+
+HappyCapy 会根据你的要求调整。你可以在 `outputs/` 文件夹中看到这些图片并下载。版权完全属于你。
+
+## 文件操作
+
+### uploads 文件夹
+
+直接拖拽文件到对话窗口,HappyCapy 就能处理它们。
+
+<Note>
+  **支持的格式**: 图片 (JPG/PNG)、文档 (PDF/Word/Excel)、视频 (MP4)、数据 (CSV/JSON)、代码(所有语言)
+
+  **最大文件大小**: 单个文件 100MB
+
+  **批量上传**: 一次可以上传多个文件
+</Note>
+
+## 快速上手的例子
+
+<AccordionGroup>
+  <Accordion icon="image" title="案例 1:生成图片并下载">
+    最简单的例子,10 秒上手。
+
+    **第 1 步:说出你的需求**
+
+    在输入框输入:
+    ```
+    生成一张图片:可爱的卡皮巴拉在草地上晒太阳
+    ```
+
+    **第 2 步:等待生成**
+
+    图片会在约 10-15 秒内显示在对话区,自动保存到 `outputs/` 文件夹。
+
+    **第 3 步:下载到本地**
+
+    - **方法 1**: 在右侧文件列表找到图片,右键下载
+    - **方法 2**: 直接说"把这张图片打包给我下载"
+
+    <Tip>
+      不满意?直接说"再来一张,风格更卡通一点",HappyCapy 会继续调整。
+    </Tip>
+  </Accordion>
+
+  <Accordion icon="file-arrow-up" title="案例 2:上传文件并处理">
+    学会上传文件,HappyCapy 能帮你处理各种文档。
+
+    **第 1 步:上传文件**
+
+    - **方法 1**: 直接拖拽文件到对话窗口
+    - **方法 2**: 点击输入框左边的 + 号,选择文件
+
+    **第 2 步:告诉 HappyCapy 要做什么**
+
+    ```
+    帮我整理这份 Excel:
+    1. 删除重复数据
+    2. 按日期排序
+    3. 生成一份干净的新表格
+    ```
+
+    **第 3 步:等待处理完成**
+
+    HappyCapy 会读取文件、处理数据、生成新文件,并告诉你改了什么。处理好的文件会保存在 `outputs/` 文件夹。
+  </Accordion>
+</AccordionGroup>
+
+## 快速提示
+
+<CardGroup cols={2}>
+  <Card title="说清楚需求" icon="bullseye">
+    越具体越好,描述得越详细,结果越准确
+  </Card>
+
+  <Card title="分步迭代" icon="rotate">
+    先从简单的开始,逐步完善
+  </Card>
+
+  <Card title="给例子" icon="lightbulb">
+    上传参考图片,让 HappyCapy 学习
+  </Card>
+
+  <Card title="给反馈" icon="comments">
+    如果结果不完美,指出需要调整的地方
+  </Card>
+</CardGroup>
+
+## 下一步
+
+<Card
+  title="查看常见问题"
+  icon="circle-question"
+  href="/getting-started/faq"
+>
+  了解数据安全、支持的 AI 模型、文件大小限制等更多信息
+</Card>

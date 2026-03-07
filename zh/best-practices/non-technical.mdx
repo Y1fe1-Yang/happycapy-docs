@@ -1,0 +1,358 @@
+---
+title: "非技术人员指南"
+description: "没有编程背景的专业人士如何利用 HappyCapy 自动化工作流并提升生产力"
+---
+
+## 适用人群
+
+财务、法务、营销、运营、产品经理以及其他没有编程背景的专业人士
+
+## 核心场景
+
+### 场景 1: 自动化数据工作流
+
+**真实案例:** 财务团队使用纯文本描述工作流,让 AI 自动执行复杂的数据处理任务。
+
+#### 在 HappyCapy 中的做法
+
+<AccordionGroup>
+  <Accordion icon="comment" title="步骤 1: 用自然语言描述你的工作流">
+    只需解释你想完成什么:
+
+    ```
+    每月初请帮我:
+    1. 从 Excel 表读取上个月的销售数据
+    2. 计算每个地区的增长率
+    3. 生成对比图表
+    4. 创建包含关键指标的报告
+    ```
+  </Accordion>
+
+  <Accordion icon="question" title="步骤 2: HappyCapy 会询问所需输入">
+    HappyCapy 会主动问问题,如:
+    - "请提供 Excel 文件"
+    - "需要对比哪个月的数据?"
+  </Accordion>
+
+  <Accordion icon="calendar" title="步骤 3: 保存为自动化流程 (Pro/Max 套餐)">
+    - 设置定时任务每月自动执行
+    - 无需每次重新描述
+  </Accordion>
+</AccordionGroup>
+
+#### 主要优势
+
+<CardGroup cols={3}>
+  <Card title="无需编码" icon="ban">
+    不需要学习 Excel 公式或编程
+  </Card>
+
+  <Card title="可重复使用" icon="repeat">
+    描述一次,反复使用
+  </Card>
+
+  <Card title="减少错误" icon="shield-check">
+    降低人为失误
+  </Card>
+</CardGroup>
+
+### 场景 2: 快速生成营销素材
+
+**真实案例:** 增长营销团队用 HappyCapy 在 15 分钟内生成数百个广告文案变体。
+
+#### 在 HappyCapy 中的做法
+
+提供详细要求进行批量创建:
+
+```
+帮我创建 20 个 Google Ads 广告变体:
+- 产品: AI 协作工具 HappyCapy
+- 目标受众: 中小企业主
+- 卖点: 零技术门槛、提升工作效率、云端运行
+- 标题限制: 30 字符以内
+- 描述限制: 90 字符以内
+```
+
+#### HappyCapy 会做什么
+
+1. 生成多个创意方向
+2. 自动检查字符限制
+3. 输出为可以直接导入广告平台的 CSV
+
+**节省时间: 从 2 小时 → 15 分钟**
+
+### 场景 3: 文档处理和格式转换
+
+**真实案例:** 法务团队快速处理合同并创建定制工具。
+
+#### 常见用例
+
+<CardGroup cols={2}>
+  <Card title="PDF 转 Word" icon="file-word">
+    ```
+    帮我把这份 PDF 合同转成 Word
+    并提取所有关键条款
+    ```
+  </Card>
+
+  <Card title="整理反馈" icon="table">
+    ```
+    将这 10 条客户反馈整理成
+    对比表格
+    ```
+  </Card>
+
+  <Card title="会议转写" icon="microphone">
+    ```
+    将我的会议录音转成文本
+    并生成行动事项列表
+    ```
+  </Card>
+
+  <Card title="格式转换" icon="rotate">
+    ```
+    将这些 Excel 表格转换为
+    格式化的 PDF 报告
+    ```
+  </Card>
+</CardGroup>
+
+#### 适用场景
+
+- 合同审查
+- 整理客户沟通记录
+- 生成会议纪要
+- 多格式文档转换
+
+## 非技术人员的建议
+
+### 1. 从简单任务开始建立信心
+
+<AccordionGroup>
+  <Accordion icon="image" title="首先尝试: 基础创作">
+    尝试简单任务: "帮我生成一张海报"
+  </Accordion>
+
+  <Accordion icon="chart-line" title="然后尝试: 数据分析">
+    转向数据任务: "分析这些数据并制作图表"
+  </Accordion>
+
+  <Accordion icon="diagram-project" title="最后尝试: 复杂工作流">
+    处理更复杂的多步骤工作流
+  </Accordion>
+</AccordionGroup>
+
+### 2. 像和助理聊天一样描述需求
+
+<Columns cols={2}>
+  <div>
+    **不要想:**
+
+    "我应该用什么工具?"
+    "我该如何编程实现?"
+  </div>
+  <div>
+    **只需说:**
+
+    "我想要什么结果?"
+    "我的最终目标是什么?"
+  </div>
+</Columns>
+
+<Tip>
+  HappyCapy 会自动为你选择合适的工具和模型。
+</Tip>
+
+### 3. 保存成功的工作流
+
+当你发现一个效果好的提示时:
+
+1. **记录有效的提示** 到你的笔记中
+2. **对于重复任务**,直接复制上次的描述
+3. **Pro/Max 用户** 可以设置自动化按计划运行任务
+
+### 4. 不要害怕问"傻"问题
+
+<Note>
+  - HappyCapy 不会评判你
+  - 试错是学习的一部分
+  - 每次对话都是独立的,随时可以重新开始
+</Note>
+
+## 真实案例
+
+### 财务: 月度预算报告
+
+```
+帮我创建月度预算 vs 实际支出报告:
+
+1. 读取 budget.xlsx 和 spending_january.xlsx
+2. 计算每个类别的差异
+3. 将超出预算的类别标记为红色
+4. 创建显示以下内容的可视化图表:
+   - 预算 vs 实际对比
+   - 预算使用百分比
+5. 生成一页的执行摘要
+```
+
+### 法务: 合同分析
+
+```
+分析这 5 份供应商合同并创建对比表:
+
+[上传合同文件]
+
+请提取并对比:
+- 合同期限
+- 付款条款
+- 责任条款
+- 终止条件
+- 关键义务
+
+创建一个汇总表,帮助我做出决策。
+```
+
+### 运营: 任务管理
+
+```
+处理我的每周团队会议纪要:
+
+[粘贴会议记录]
+
+请:
+1. 识别所有行动事项
+2. 根据上下文提到的人员分配
+3. 提取截止日期(或建议合理的日期)
+4. 创建包含以下列的表格: 任务、负责人、截止日期、状态
+5. 导出为 CSV 以便导入我们的项目管理工具
+```
+
+### HR: 候选人筛选
+
+```
+帮我筛选这 20 份简历:
+
+[上传简历文件]
+
+职位要求:
+- 3 年以上项目管理经验
+- PMP 认证优先
+- 有敏捷方法论经验
+- 强沟通技巧
+
+请:
+1. 按资质匹配度对候选人排名
+2. 突出每个人的关键优势和差距
+3. 创建前 5 名候选人的候选名单
+4. 根据他们的背景生成面试问题
+```
+
+## 各部门常见工作流
+
+### 财务部门
+
+<AccordionGroup>
+  <Accordion icon="file-invoice" title="发票处理">
+    从发票 PDF 中批量提取数据到结构化电子表格
+  </Accordion>
+
+  <Accordion icon="chart-pie" title="财务仪表板">
+    从会计数据创建可视化仪表板
+  </Accordion>
+
+  <Accordion icon="file-contract" title="费用报告">
+    自动化费用报告生成和审批工作流
+  </Accordion>
+
+  <Accordion icon="calculator" title="差异分析">
+    计算并可视化预算 vs 实际差异
+  </Accordion>
+</AccordionGroup>
+
+### 法务部门
+
+<AccordionGroup>
+  <Accordion icon="file-signature" title="合同审查">
+    提取并对比多份合同中的关键条款
+  </Accordion>
+
+  <Accordion icon="balance-scale" title="合规检查">
+    检查文档是否符合监管要求
+  </Accordion>
+
+  <Accordion icon="magnifying-glass" title="文档搜索">
+    在案例文件中搜索相关先例
+  </Accordion>
+
+  <Accordion icon="file-export" title="模板生成">
+    生成带有变量字段的合同模板
+  </Accordion>
+</AccordionGroup>
+
+### 运营部门
+
+<AccordionGroup>
+  <Accordion icon="clipboard-check" title="流程文档">
+    将会议讨论转换为结构化流程文档
+  </Accordion>
+
+  <Accordion icon="calendar" title="日程优化">
+    分析团队日历并建议最佳会议时间
+  </Accordion>
+
+  <Accordion icon="inbox" title="邮件自动化">
+    处理和分类传入请求
+  </Accordion>
+
+  <Accordion icon="file-excel" title="报告生成">
+    生成每周/每月运营报告
+  </Accordion>
+</AccordionGroup>
+
+## 成功技巧
+
+### 从小做起并逐步扩展
+
+不要试图一次自动化所有事情。相反:
+
+1. **选择一个重复性任务** 每周占用 30 分钟以上
+2. **用 HappyCapy 自动化该任务**
+3. **通过 2-3 次迭代优化工作流**
+4. **一旦第一个任务运行顺畅,转向下一个任务**
+
+### 建立你的提示库
+
+<Tip>
+  创建一个文档,按任务类型组织你表现最好的提示。这成为你的个人自动化工具包。
+</Tip>
+
+### 利用模板
+
+一旦你创建了成功的工作流:
+
+- 保存提示结构
+- 每次替换具体细节(日期、文件名等)
+- 与你的团队共享成功的模板
+
+### 请求解释
+
+如果你想了解 HappyCapy 在做什么:
+
+```
+请解释你处理这些数据的每个步骤
+以及为什么选择这种方法。
+```
+
+这有助于你学习并改进未来的提示。
+
+## 下一步
+
+<CardGroup cols={2}>
+  <Card title="通用最佳实践" icon="lightbulb" href="/zh/best-practices/general">
+    学习适用于所有用户的通用技巧
+  </Card>
+
+  <Card title="团队协作" icon="users" href="/zh/best-practices/team-collaboration">
+    与团队共享工作流
+  </Card>
+</CardGroup>

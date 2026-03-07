@@ -1,0 +1,409 @@
+---
+title: "产品设计与原型制作"
+description: "产品设计师如何使用 HappyCapy 快速将设计稿转换为功能原型并实现视觉变更"
+---
+
+## 适用人群
+
+产品设计师、UI/UX 设计师、产品经理
+
+## 核心场景
+
+### 场景 1: 从设计稿到功能原型
+
+**真实案例:** 设计团队直接粘贴设计稿截图生成交互式前端代码。
+
+#### 在 HappyCapy 中的做法
+
+<AccordionGroup>
+  <Accordion icon="pen-ruler" title="步骤 1: 设计界面">
+    在 Figma、Sketch 或任何设计工具中设计你的界面
+  </Accordion>
+
+  <Accordion icon="camera" title="步骤 2: 截图并粘贴">
+    - 对你的设计稿截图
+    - 粘贴到 HappyCapy (Cmd+V / Ctrl+V)
+  </Accordion>
+
+  <Accordion icon="comment" title="步骤 3: 描述交互逻辑">
+    解释界面应该如何行为:
+
+    ```
+    这是一个登录表单。当用户点击"登录"时:
+    1. 验证邮箱格式
+    2. 检查密码至少 8 个字符
+    3. 按钮显示加载状态
+    4. 成功后跳转到 /dashboard
+    5. 出错时在表单下方显示错误信息
+    ```
+  </Accordion>
+</AccordionGroup>
+
+#### HappyCapy 会做什么
+
+<CardGroup cols={2}>
+  <Card title="元素识别" icon="magnifying-glass">
+    识别设计稿中的元素(按钮、输入框、布局)
+  </Card>
+
+  <Card title="代码生成" icon="code">
+    生成完整的 React 组件代码
+  </Card>
+
+  <Card title="交互逻辑" icon="gears">
+    实现交互逻辑
+  </Card>
+
+  <Card title="实时预览" icon="eye">
+    启动开发服务器并提供预览链接
+  </Card>
+</CardGroup>
+
+#### 主要优势
+
+- 设计师无需编写代码
+- 工程师直接看到可工作的原型
+- 减少设计与开发之间的沟通成本
+- 快速验证交互逻辑
+
+**节省时间: 2-3 倍更快的执行**
+
+### 场景 2: 快速视觉调整
+
+**真实案例:** 设计团队不再编写设计文档,通过 AI Code 直接实现视觉变更。
+
+#### 在 HappyCapy 中的做法
+
+提供精确的视觉规格:
+
+```
+帮我调整登录页面的视觉样式:
+
+文件: src/pages/Login.tsx
+
+变更要求:
+- 将主色从蓝色 (#3B82F6) 改为紫色 (#8B5CF6)
+- 将标题字体从 'Inter' 改为 'Poppins',粗细 600
+- 将输入框高度从 40px 改为 48px
+- 将按钮圆角从 4px 改为 8px
+- 整体间距增加 20%,让布局更透气
+
+保持现有功能不变;仅样式更新。
+```
+
+#### HappyCapy 会做什么
+
+1. 精确修改 CSS/Tailwind 类
+2. 保持所有功能逻辑完整
+3. 自动运行前端并生成预览
+4. 你可以立即看到效果,满意后提交
+
+#### 工作流程变化
+
+<Columns cols={2}>
+  <div>
+    **旧流程:**
+
+    1. 编写设计文档
+    2. 工程师理解需求
+    3. 实现变更
+    4. 设计师审查
+    5. 请求修改
+    6. 重复
+  </div>
+  <div>
+    **新流程:**
+
+    1. 设计师直接实现
+    2. 预览结果
+    3. 完成
+  </div>
+</Columns>
+
+## 产品设计师的建议
+
+### 1. 请工程师帮助初始设置
+
+为获得最佳体验,初期请获得以下帮助:
+
+- Git 权限配置
+- 开发环境设置
+
+<Tip>
+  一旦配置完成,你将拥有革命性的工作流程,可以直接实现设计而无需等待工程资源。
+</Tip>
+
+### 2. 说明你的设计背景
+
+在对话开始时设置上下文:
+
+```
+记住这一点: 我是设计师,编程经验有限,
+需要详细解释和较小的增量变更。
+```
+
+HappyCapy 会调整沟通方式,更加友好并提供循序渐进的指导。
+
+### 3. 大量使用图片粘贴
+
+<Note>
+  **Cmd+V / Ctrl+V** 直接粘贴截图。HappyCapy 非常擅长"看图说话"生成代码 - 这比用文字描述界面快 10 倍。
+</Note>
+
+### 4. 从简单任务开始
+
+逐步建立信心:
+
+<AccordionGroup>
+  <Accordion icon="palette" title="首先尝试: 改变按钮颜色">
+    ```
+    将主按钮颜色从 #3B82F6 改为 #10B981
+    ```
+  </Accordion>
+
+  <Accordion icon="layout" title="然后尝试: 调整页面布局">
+    ```
+    将仪表板布局调整为使用 3 列网格
+    而不是 2 列
+    ```
+  </Accordion>
+
+  <Accordion icon="cube" title="最后尝试: 复杂交互">
+    ```
+    添加一个多步骤表单,带进度指示器和
+    步骤之间的平滑过渡
+    ```
+  </Accordion>
+</AccordionGroup>
+
+## 真实案例
+
+### 示例 1: 组件变体
+
+```
+我需要创建这个卡片组件的 3 个变体:
+
+[粘贴基础卡片截图]
+
+变体:
+1. 默认状态 - 细微阴影,无边框
+2. 悬停状态 - 提升阴影,缩放 1.02
+3. 激活/选中状态 - 蓝色边框,蓝色强调
+
+生成包含所有三个状态的 React 组件。
+```
+
+### 示例 2: 响应式设计实现
+
+```
+这是我的桌面版主区域设计稿:
+
+[粘贴桌面设计稿]
+
+请实现响应式行为:
+- 桌面 (1440px+): 2 列布局,图片在右侧
+- 平板 (768px-1439px): 2 列布局,较小图片
+- 移动端 (< 768px): 单列,图片在文本上方
+
+使用 Tailwind CSS 响应式工具。
+```
+
+### 示例 3: 交互动画
+
+```
+为这个按钮组件添加微交互:
+
+[粘贴按钮设计稿]
+
+需要的动画:
+- 悬停: 轻微放大 (1.05) 200ms 缓动
+- 点击: 快速缩小 (0.95) 然后恢复
+- 加载状态: 按钮上的脉冲动画
+- 成功: 绿色对勾淡入动画
+
+保持细微和专业。
+```
+
+### 示例 4: 设计系统组件
+
+```
+基于这个设计创建一个可重用的 Alert 组件:
+
+[粘贴 alert 设计稿]
+
+要求:
+- 支持 4 种类型: info、success、warning、error
+- 每种类型都有适当的图标和配色方案
+- 可用 X 按钮关闭
+- 可选标题和描述
+- 关闭时的平滑淡出动画
+
+生成为带有 props 接口的 TypeScript React 组件。
+```
+
+## 设计工作流集成
+
+### Figma 到代码
+
+<AccordionGroup>
+  <Accordion icon="figma" title="步骤 1: 在 Figma 中设计">
+    使用适当的命名和组织创建你的设计
+  </Accordion>
+
+  <Accordion icon="image" title="步骤 2: 导出框架">
+    导出特定框架或对设计截图
+  </Accordion>
+
+  <Accordion icon="paste" title="步骤 3: 粘贴到 HappyCapy">
+    粘贴截图并描述任何交互
+  </Accordion>
+
+  <Accordion icon="code" title="步骤 4: 审查生成的代码">
+    检查生成的组件并请求改进
+  </Accordion>
+
+  <Accordion icon="check" title="步骤 5: 在浏览器中测试">
+    预览实时版本并根据需要迭代
+  </Accordion>
+</AccordionGroup>
+
+### 协作设计评审
+
+使用 HappyCapy 快速实现设计评审的反馈:
+
+```
+基于设计评审反馈:
+
+1. 将卡片阴影改得更细微(不透明度降低 50%)
+2. 将正文文本字号从 14px 增加到 16px
+3. 增加各部分之间的留白(将间距从 16px 增加到 24px)
+4. 将 CTA 按钮从绿色改为品牌紫色
+5. 使标题在滚动时固定
+
+文件: src/components/ProductCard.tsx
+```
+
+### 设计 QA
+
+验证你的实现是否与设计匹配:
+
+```
+将这个实时页面与我的设计稿对比:
+
+[粘贴设计稿]
+[粘贴实现页面截图]
+
+请识别:
+1. 颜色差异
+2. 间距/内边距不一致
+3. 排版不匹配
+4. 缺失的设计细节
+5. 为任何差异建议修复
+```
+
+## 高级技巧
+
+### 设计令牌集成
+
+```
+我有一个设计令牌文件 (design-tokens.json)。
+
+请更新 src/components/ui/ 中的所有组件
+使用这些令牌而不是硬编码值:
+
+- 颜色: 使用 colors.primary、colors.secondary 的令牌
+- 间距: 使用 spacing.sm、spacing.md、spacing.lg
+- 排版: 使用 typography.heading、typography.body
+
+在切换到基于令牌的样式时保持所有功能。
+```
+
+### 组件库创建
+
+```
+帮我为我们的设计系统创建组件库:
+
+需要的组件:
+- Button (primary、secondary、ghost、danger 变体)
+- Input (text、email、password 带验证状态)
+- Card (带 header、body、footer 部分)
+- Modal (带遮罩、关闭按钮、可定制内容)
+- Toast 通知 (success、error、warning、info)
+
+使用 TypeScript 和 Tailwind CSS。每个组件
+应该在自己的文件中,带有适当的 props 文档。
+```
+
+### 可访问性改进
+
+```
+审查这个组件的可访问性问题:
+
+文件: src/components/LoginForm.tsx
+
+请检查并修复:
+1. 表单输入的适当 ARIA 标签
+2. 键盘导航支持
+3. 焦点指示器
+4. 颜色对比度 (WCAG AA 合规)
+5. 屏幕阅读器兼容性
+
+实现修复并解释做了哪些更改。
+```
+
+## 有效设计实现的技巧
+
+### 对视觉细节要具体
+
+<Columns cols={2}>
+  <div>
+    **模糊:**
+    ```
+    让它看起来更好
+    ```
+  </div>
+  <div>
+    **具体:**
+    ```
+    将字母间距增加到 0.05em,
+    改变字重为 600,
+    添加细微阴影 (0 2px 4px rgba(0,0,0,0.1))
+    ```
+  </div>
+</Columns>
+
+### 使用设计术语
+
+HappyCapy 理解设计术语:
+
+- 字距调整、行距、字距
+- 色相、饱和度、亮度
+- 内边距、外边距、间隙
+- 宽高比、对象适应
+- 贝塞尔曲线、缓动函数
+
+### 引用设计模式
+
+```
+实现类似 Airbnb 房源卡片的卡片布局:
+- 带圆角的图片
+- 带快速操作的叠加层
+- 标题、评分和价格
+- 带提升效果的细微悬停效果
+```
+
+## 下一步
+
+<CardGroup cols={2}>
+  <Card title="通用最佳实践" icon="lightbulb" href="/zh/best-practices/general">
+    学习适用于所有用户的通用技巧
+  </Card>
+
+  <Card title="开发者指南" icon="code" href="/zh/best-practices/developers">
+    了解如何与工程协作
+  </Card>
+
+  <Card title="营销指南" icon="megaphone" href="/zh/best-practices/marketing">
+    学习创建营销素材
+  </Card>
+</CardGroup>

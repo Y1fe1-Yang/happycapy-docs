@@ -1,0 +1,214 @@
+---
+title: "Multi-Agent Team 指南"
+description: "学习如何使用 Multi-Agent Teams 用专门的 AI 智能体处理复杂项目"
+---
+
+<img src="/images/features/agent-team.png" alt="Multi-Agent Teams" style={{ borderRadius: '12px', marginBottom: '24px' }} />
+
+## 什么是 Multi-Agent Team?
+
+在复杂项目中,单个 AI 可能无法完美处理所有方面。Multi-Agent Team 允许你创建专门的 AI 智能体,每个负责不同的任务:
+
+<CardGroup cols={2}>
+  <Card title="研究员" icon="magnifying-glass">
+    负责搜索和整理信息
+  </Card>
+
+  <Card title="设计师" icon="palette">
+    负责视觉设计和创意
+  </Card>
+
+  <Card title="开发者" icon="code">
+    负责编写和优化代码
+  </Card>
+
+  <Card title="测试员" icon="vial">
+    负责质量检查和测试
+  </Card>
+</CardGroup>
+
+## 开启 Agent Teams 功能
+
+<Note>
+Agent Teams 目前是实验性功能,我们正在持续优化体验。
+</Note>
+
+在使用 Multi-Agent Team 之前,需要先开启这个实验性功能:
+
+<Steps>
+  <Step title="打开设置">
+    点击 **左下角的头像**,打开 **Settings** 页面
+  </Step>
+
+  <Step title="找到实验性功能">
+    找到 **"Experimental"** 选项部分
+  </Step>
+
+  <Step title="开启 Agent Teams">
+    打开 **"Agent Teams"** 开关
+  </Step>
+</Steps>
+
+开启后,你就可以在对话中创建多智能体团队了!
+
+## 如何使用 Multi-Agent Teams
+
+只需在对话中说明你需要团队协作,HappyCapy 会自动创建和管理 Agent Team:
+
+```
+我需要开发一个完整的网站,包括前端、后端和数据库设计。
+请组建一个团队来完成这个项目。
+```
+
+HappyCapy 会自动:
+
+1. **根据你的项目需求创建合适的 Agent 角色**
+2. **分配任务给各个 Agent**,职责明确
+3. **协调 Agents 之间的协作**,高效团队合作
+4. **整合所有成果**,形成完整的最终交付物
+
+## 适用场景
+
+Multi-Agent Teams 擅长需要多样化专业知识的复杂项目:
+
+<AccordionGroup>
+  <Accordion icon="laptop-code" title="复杂项目开发">
+    需要多个专业领域的项目(前端、后端、数据库、DevOps)
+  </Accordion>
+
+  <Accordion icon="pen-fancy" title="内容创作">
+    研究 + 写作 + 设计工作流
+  </Accordion>
+
+  <Accordion icon="chart-line" title="数据分析项目">
+    收集 + 清洗 + 分析 + 可视化流程
+  </Accordion>
+
+  <Accordion icon="bullhorn" title="营销活动">
+    策划 + 设计 + 文案 + 执行工作流
+  </Accordion>
+</AccordionGroup>
+
+## 实战案例:番茄钟应用开发
+
+<Note>
+**执行时间**: 3-4 分钟 | **难度**: ⭐⭐⭐⭐
+
+**原本**: 需求分析 + UI 设计 + 前端开发 + 测试 = 几天工作
+
+**现在**: 一次对话,团队自动分工,4 分钟交付完整应用
+</Note>
+
+### 示例 Prompt
+
+```
+请组建一个开发团队,帮我完成「番茄钟」应用:
+
+产品需求:
+- 25 分钟工作计时(可暂停/重置)
+- 5 分钟休息提醒(声音 + 视觉提示)
+- 统计今日完成的番茄钟次数
+- 简洁美观的界面设计(渐变色、现代风格)
+- 响应式布局(支持手机和电脑)
+- 本地存储(刷新不丢失数据)
+
+团队分工建议:
+1. 产品经理:梳理功能逻辑和用户流程
+2. UI 设计师:设计界面和交互方案
+3. 前端工程师:实现功能(HTML/CSS/JavaScript)
+4. 测试工程师:验证功能完整性
+
+请团队协作完成,并给我一个可直接使用的网页应用!
+```
+
+### 会发生什么
+
+你会看到团队成员并行工作:
+
+<Columns cols={2}>
+  <div>
+    **产品经理**
+    - 规划功能
+    - 定义用户流程
+    - 设置需求
+  </div>
+
+  <div>
+    **UI 设计师**
+    - 创建原型
+    - 设计交互
+    - 选择颜色和样式
+  </div>
+
+  <div>
+    **前端工程师**
+    - 编写 HTML/CSS/JS
+    - 实现功能
+    - 设置本地存储
+  </div>
+
+  <div>
+    **测试工程师**
+    - 测试功能
+    - 验证需求
+    - 报告问题
+  </div>
+</Columns>
+
+整个过程就像真实团队协作,但效率提升数倍——只需 3-4 分钟!
+
+<Tip>
+**震撼点**: 你会拿到一个完整的、可以直接使用的网页应用,包括完整代码、美观界面、流畅动画、可靠功能。
+</Tip>
+
+## 高级功能
+
+### 灵活的模型选择
+
+团队中的不同 Agents 可以使用不同的大模型(如 Sonnet、Gemini、Haiku),让每个智能体在各自擅长的领域发挥最佳性能。
+
+### 自动协调
+
+Agents 自动:
+- 在团队成员之间共享信息
+- 解决依赖关系和阻碍
+- 协调时间和顺序
+- 将他们的工作整合为完整的整体
+
+## 成本考虑
+
+<Warning>
+多智能体团队协作的效率很高,但 token 消耗也会相应增加。
+
+如果你经常使用团队功能,推荐开通 **Max 订阅**,畅享无限 tokens,专注于创造而不用担心用量。
+</Warning>
+
+## 成功秘诀
+
+<CardGroup cols={2}>
+  <Card title="具体明确" icon="bullseye">
+    清晰定义项目需求和期望结果
+  </Card>
+
+  <Card title="建议角色" icon="users">
+    根据项目需求推荐团队角色
+  </Card>
+
+  <Card title="定义交付物" icon="box">
+    指定你期望的最终输出
+  </Card>
+
+  <Card title="迭代优化" icon="rotate">
+    审查结果,如有需要请求改进
+  </Card>
+</CardGroup>
+
+## 下一步
+
+<Card
+  title="尝试 Multi-Agent Teams"
+  icon="users"
+  href="https://happycapy.ai"
+>
+  开启实验性功能,开始使用协作 AI 团队构建项目
+</Card>

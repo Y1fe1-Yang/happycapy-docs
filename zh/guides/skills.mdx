@@ -1,0 +1,246 @@
+---
+title: "Skills 指南"
+description: "学习如何使用、查找和创建 Skills 来扩展 HappyCapy 的能力"
+---
+
+<img src="/images/features/skill.png" alt="HappyCapy 中的 Skills" style={{ borderRadius: '12px', marginBottom: '24px' }} />
+
+## 什么是 Skills?
+
+Skills 是 HappyCapy 的"能力插件",就像给 AI 安装不同的专业技能。它们不仅仅是简单的文本指令——Skills 可以:
+
+- **调用外部 API**: 连接 GitHub、Notion、Google 等第三方服务,实现跨平台数据同步
+- **运行 Python/JavaScript 脚本**: 执行复杂的数据处理、图像生成、视频编辑等任务
+- **使用 MCP 协议** (Model Context Protocol): 像乐高积木一样组合各种工具能力
+
+<Note>
+Skills 是下一代软件形态:轻量(几 KB 文本文件)、开源(GitHub 共享)、易编辑(5 分钟定制)。不需要安装臃肿的应用,一个 Skill 就能获得专业功能。
+</Note>
+
+### Skills 可以做什么
+
+<CardGroup cols={2}>
+  <Card title="Frontend Slides" icon="presentation-screen">
+    创建动画丰富的 HTML 演示文稿,支持交互效果和现代设计
+  </Card>
+
+  <Card title="3D Web Experience" icon="cube">
+    构建沉浸式 3D 网页体验,使用 Three.js 和 WebGL 技术
+  </Card>
+
+  <Card title="Redbook Creator" icon="image">
+    创作小红书风格帖子(标题+正文+标签),生成精美配图
+  </Card>
+
+  <Card title="Resume Optimizer" icon="file-user">
+    针对特定职位描述优化简历,提供数据驱动的改进建议
+  </Card>
+</CardGroup>
+
+## 为什么说是"下一代软件"
+
+<Columns cols={2}>
+  <div>
+    **传统软件**
+    - 几百 MB 安装包
+    - 付费订阅制
+    - 功能固定无法改
+    - 闭源不透明
+  </div>
+
+  <div>
+    **Skills(下一代)**
+    - 几 KB 文本文件
+    - 完全免费开源
+    - 随意编辑定制
+    - 开源可学习
+  </div>
+</Columns>
+
+## 如何使用 Skills
+
+使用 Skills 超简单,HappyCapy 会根据你的需求自动调用。
+
+### 方式 1:自然语言(推荐)
+
+直接说你想做什么,HappyCapy 自动选择合适的 Skill。
+
+```
+生成一张卡皮巴拉的插画
+```
+
+HappyCapy 会自动调用图片生成 Skill。
+
+<Tip>
+大部分时候,用自然语言就够了。HappyCapy 会自动识别并调用最合适的 Skill。
+</Tip>
+
+### 方式 2:手动选择
+
+可以通过点击对话框的 **Skills** 按钮,或者输入斜杠命令 `/` 来唤起 Skill 选择菜单,浏览已安装的 Skills 并手动选择使用。
+
+## 如何查找 Skills
+
+Skills 是开源的,全球开发者在贡献各种实用技能。你可以在这些地方找到:
+
+### 方式 1:直接问 HappyCapy(最简单)
+
+```
+帮我找一个数据处理的Skill
+```
+
+HappyCapy 会使用内置的 `find-skills` 功能,自动搜索开源社区,向你推荐最合适的 Skills。
+
+### 方式 2:在社区平台搜索
+
+<CardGroup cols={3}>
+  <Card title="GitHub" icon="github">
+    搜索 "Skills" - 有成千上万的开源技能
+  </Card>
+
+  <Card title="SkillsMP" icon="store">
+    Skills Marketplace - 按分类浏览技能
+  </Card>
+
+  <Card title="SkillsSH" icon="users">
+    社区分享平台 - 发现其他用户的创意技能
+  </Card>
+</CardGroup>
+
+<Note>
+所有 Skills 都是开源的,你可以查看源码、学习、修改、分享!
+</Note>
+
+## 如何创建 Skills
+
+创建 Skill 很简单,就是用自然语言描述你想要的功能。
+
+### 完整案例:求职简历优化器
+
+<AccordionGroup>
+  <Accordion icon="lightbulb" title="痛点">
+    "投了 100 份简历没回应,不知道怎么改。"
+  </Accordion>
+
+  <Accordion icon="hammer" title="解决方案">
+    创建一个专门优化简历的 Skill。
+
+    ```
+    帮我创建一个 Skill:
+
+    名称:求职简历优化器
+
+    功能:
+    输入:我的简历 + 目标岗位 JD
+
+    处理:
+    1. 分析 JD 的关键词和要求
+    2. 对比简历,找出匹配点和不足
+    3. 优化措辞(更符合岗位)
+    4. 量化成果(用数据说话)
+    5. 调整排版(突出重点)
+    6. 生成 3 个版本:保守版/平衡版/激进版
+
+    输出:
+    - 3 个优化后的简历
+    - 每个版本的使用建议
+    - 面试准备要点
+
+    并帮我测试一下!
+    ```
+  </Accordion>
+
+  <Accordion icon="check" title="使用你的新 Skill">
+    创建后,这个 Skill 就保存在你的 Skill Store 了。以后每次投简历,只需上传新的 JD,Skill 自动优化!
+  </Accordion>
+</AccordionGroup>
+
+### 创建步骤
+
+直接告诉 HappyCapy 你想创建什么技能!描述:
+- **名称**: 给你的 Skill 起个名字
+- **功能**: 需要什么输入
+- **处理**: 如何工作
+- **输出**: 应该产生什么
+
+<Tip>
+你还可以改编别人的技能!如果觉得某个 Skill 不够完美,可以基于它进行修改。站在巨人的肩膀上,让工具更贴合你的需求。
+</Tip>
+
+## Skill 分类
+
+HappyCapy 支持多个领域的 Skills:
+
+### AI 与多媒体
+- AI 图像生成(FLUX、Gemini、50+ 模型)
+- AI 视频生成(Veo、Seedance、Wan、40+ 模型)
+- 视频处理与编辑(FFmpeg、字幕、剪辑)
+- 图像增强与处理
+
+### 设计与前端
+- 3D 网页体验(Three.js、React Three Fiber)
+- 前端设计系统
+- Canvas 设计工具
+- 演示文稿生成(HTML/PPT)
+
+### 内容创作与营销
+- 小红书内容生成
+- Reddit 帖子创作
+- SEO 内容写作
+- 多平台营销自动化
+
+### 开发工具
+- GitHub 集成
+- MCP 集成
+- Better Auth 最佳实践
+- Vercel/React/Next.js 最佳实践
+
+### 数据与文档
+- 探索性数据分析
+- 股票分析
+- PDF/DOCX/XLSX 处理
+- 数据故事化
+
+### 学术与科研
+- 学术论文写作
+- 研究助手
+- 科学批判性思维
+- 假设生成
+
+## Skills 的魅力
+
+<CardGroup cols={2}>
+  <Card title="轻量" icon="feather">
+    一个文本文件,几 KB,不占空间
+  </Card>
+
+  <Card title="开源" icon="code">
+    GitHub 共享,全球开发者贡献
+  </Card>
+
+  <Card title="易编辑" icon="pen">
+    5 分钟定制成你想要的样子
+  </Card>
+
+  <Card title="免费" icon="gift">
+    所有 Skills 都是开源免费的
+  </Card>
+
+  <Card title="社区" icon="users">
+    分享你的创意,使用别人的智慧
+  </Card>
+
+  <Card title="下一代" icon="rocket">
+    这就是下一代软件的样子!
+  </Card>
+</CardGroup>
+
+## 下一步
+
+<Card
+  title="探索 Skill Store"
+  icon="store"
+  href="https://happycapy.ai"
+>
+  浏览并安装社区的 Skills 来扩展 HappyCapy 的能力
+</Card>
