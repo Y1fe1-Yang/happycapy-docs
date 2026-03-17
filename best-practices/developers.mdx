@@ -3,17 +3,17 @@ title: "Developers Guide"
 description: "How developers can use Happycapy efficiently for rapid prototyping, debugging, testing, and code exploration"
 ---
 
-## Who This Is For
+## Who this is for
 
 Software Engineers, Data Engineers, DevOps, Security Engineers
 
-## Core Scenarios
+## Core scenarios
 
-### Scenario 1: Rapid Prototyping (Automatic Acceptance Mode)
+### Scenario 1: Rapid prototyping (automatic acceptance mode)
 
 **Real Case:** The product team uses "automatic acceptance mode" to let AI build Vim mode independently, with 70% of the code completed by AI.
 
-#### How to do it in Happycapy
+#### How to do it
 
 <AccordionGroup>
   <Accordion icon="code" title="Step 1: Start with Clean Git State">
@@ -45,16 +45,16 @@ Software Engineers, Data Engineers, DevOps, Security Engineers
   </Accordion>
 </AccordionGroup>
 
-#### Best Practices
+#### Best practices
 
 <CardGroup cols={2}>
-  <Card title="Suitable For" icon="check">
+  <Card title="Good for" icon="check">
     - Edge functions
     - Experimental prototypes
     - Unfamiliar technology stacks
   </Card>
 
-  <Card title="Not Suitable For" icon="xmark">
+  <Card title="Not good for" icon="xmark">
     - Core business logic
     - Security-critical code
   </Card>
@@ -64,11 +64,11 @@ Software Engineers, Data Engineers, DevOps, Security Engineers
   Submit Git checkpoints at each stage to facilitate rollback if needed.
 </Tip>
 
-### Scenario 2: Debugging Complex Problems
+### Scenario 2: Debugging complex problems
 
 **Real Case:** The security team reduced incident resolution time from 10-15 minutes to 5 minutes.
 
-#### How to do it in Happycapy
+#### How to do it
 
 Provide comprehensive context for faster debugging:
 
@@ -85,7 +85,7 @@ Please help me:
 3. Provide a fix plan and possible side effects
 ```
 
-#### Advantages of Happycapy
+#### Advantages
 
 <CardGroup cols={2}>
   <Card title="Automatic Code Reading" icon="magnifying-glass">
@@ -107,11 +107,11 @@ Please help me:
 
 **Time savings: 50%**
 
-### Scenario 3: Test Driven Development (TDD)
+### Scenario 3: Test driven development (TDD)
 
 **Real Case:** Inference teams use AI to generate comprehensive unit tests that automatically cover edge cases.
 
-#### How to do it in Happycapy
+#### How to do it
 
 Follow the TDD red-green-refactor cycle:
 
@@ -126,7 +126,7 @@ First help me write test cases covering:
 Then implement the function and ensure all tests pass.
 ```
 
-#### TDD Workflow
+#### TDD workflow
 
 1. **Happycapy writes tests first** (TDD red light)
 2. **Then writes the implementation** (TDD green light)
@@ -139,11 +139,11 @@ Then implement the function and ensure all tests pass.
 - Reduces missing boundary situations
 - Better code quality
 
-### Scenario 4: Quickly Understand Unfamiliar Codebases
+### Scenario 4: Understand unfamiliar codebases quickly
 
 **Real Case:** The API team makes codebase exploration the "first stop", dramatically reducing context collection time.
 
-#### How to do it in Happycapy
+#### How to do it
 
 Ask for a guided tour of the codebase:
 
@@ -160,7 +160,7 @@ Please help me:
    login logic
 ```
 
-#### What Happycapy Will Do
+#### What Happycapy will do
 
 <CardGroup cols={2}>
   <Card title="Architecture Diagram" icon="sitemap">
@@ -180,13 +180,13 @@ Please help me:
   </Card>
 </CardGroup>
 
-**Time Savings: From Hours → Minutes**
+**Time savings: from hours to minutes**
 
-### Scenario 5: Security Review and Infrastructure Changes
+### Scenario 5: Security review and infrastructure changes
 
 **Real Case:** Security teams use AI to quickly review Terraform plans.
 
-#### How to do it in Happycapy
+#### How to do it
 
 <AccordionGroup>
   <Accordion icon="code" title="Generate Terraform Plan">
@@ -211,16 +211,16 @@ Please help me:
   </Accordion>
 </AccordionGroup>
 
-#### Happycapy Helps You
+#### Happycapy helps you
 
 - Identify high-risk operations (delete database, modify firewall rules)
 - Check whether permission configuration complies with best practices
 - Generate review checklist
 - Suggest safer alternatives
 
-## Developer-Specific Advice
+## Developer-specific advice
 
-### 1. Establish a Self-Validation Loop
+### 1. Establish a self-validation loop
 
 Create prompts that include automatic validation:
 
@@ -232,7 +232,7 @@ When implementing this feature:
 - Finally return code that passes all tests
 ```
 
-### 2. Develop Intuition for Task Classification
+### 2. Develop intuition for task classification
 
 <Columns cols={2}>
   <div>
@@ -249,7 +249,7 @@ When implementing this feature:
   </div>
 </Columns>
 
-### 3. Write Clear and Detailed Prompts
+### 3. Write clear and detailed prompts
 
 <Note>
   - Give explicit file paths when repositories have similar names
@@ -257,7 +257,7 @@ When implementing this feature:
   - Provide context (e.g., "This project uses TypeScript + React + Zustand")
 </Note>
 
-### 4. Use Multiple Instances for Parallel Work
+### 4. Use multiple instances for parallel work
 
 Happycapy supports multiple tabs, each tab is an independent session:
 
@@ -265,7 +265,7 @@ Happycapy supports multiple tabs, each tab is an independent session:
 - Maintain full context for each session
 - Switching is stress-free
 
-### 5. Treat Refactoring Like a "Slot Machine"
+### 5. Treat refactoring like a "slot machine"
 
 <AccordionGroup>
   <Accordion icon="save" title="Step 1: Save Current State">
@@ -291,9 +291,9 @@ Happycapy supports multiple tabs, each tab is an independent session:
   Starting over often has a higher success rate than correcting mistakes.
 </Tip>
 
-## Example Use Cases
+## Example use cases
 
-### Rapid API Endpoint Creation
+### Rapid API endpoint creation
 
 ```
 Create a new REST API endpoint:
@@ -306,7 +306,7 @@ Create a new REST API endpoint:
 - Update API documentation
 ```
 
-### Code Quality Improvements
+### Code quality improvements
 
 ```
 Review and improve the code quality of src/utils/validation.ts:
@@ -317,7 +317,7 @@ Review and improve the code quality of src/utils/validation.ts:
 5. Ensure consistent error handling
 ```
 
-### Migration to New Framework
+### Migration to new framework
 
 ```
 I need to migrate this React class component to a functional
@@ -333,14 +333,14 @@ Requirements:
 - Keep the same prop interface
 ```
 
-## Next Steps
+## Next steps
 
 <CardGroup cols={2}>
-  <Card title="General Best Practices" icon="lightbulb" href="/best-practices/general">
-    Learn universal tips that apply to all users
+  <Card title="General best practices" icon="lightbulb" href="/best-practices/general">
+    Universal tips for all users
   </Card>
 
-  <Card title="Team Collaboration" icon="users" href="/best-practices/team-collaboration">
-    Learn how to share workflows with your team
+  <Card title="Team collaboration" icon="users" href="/best-practices/team-collaboration">
+    Share workflows with your team
   </Card>
 </CardGroup>

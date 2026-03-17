@@ -5,9 +5,9 @@ description: "Learn how to use MCP for multi-session memory management and integ
 
 ## What is MCP?
 
-MCP (Model Context Protocol) is an open protocol standard that enables AI assistants to securely connect to a variety of external tools, data sources, and services.
+MCP (Model Context Protocol) is an open protocol standard that lets AI assistants securely connect to external tools, data sources, and services.
 
-To put it simply, MCP is like installing a "plugin system" for AI, allowing it to:
+Think of MCP as a "plugin system" for AI. It lets AI:
 
 <CardGroup cols={2}>
   <Card title="Email Integration" icon="envelope">
@@ -35,35 +35,35 @@ To put it simply, MCP is like installing a "plugin system" for AI, allowing it t
   </Card>
 </CardGroup>
 
-## Why is MCP Needed?
+## Why use MCP?
 
 After installing MCP in Happycapy, you can:
 
-### Automate Routine Tasks
-Let AI help you handle emails, schedules, and organize documents
+### Automate routine tasks
+Let AI handle emails, schedules, and document organization
 
-### Cross-Platform Collaboration
-Complete multiple application operations in one conversation (such as reading attachments from Gmail, processing and uploading to Notion)
+### Cross-platform collaboration
+Do multiple application operations in one conversation (like reading attachments from Gmail, processing them, and uploading to Notion)
 
-### Persistent Context
-Through Memory MCP, AI can remember important content such as project information and relationships, maintaining memory across sessions
+### Persistent context
+Memory MCP lets AI remember project information, relationships, and other important content across sessions
 
-### Simplify Development Process
+### Simplify development
 Manage GitHub repositories, create Issues, and view code directly in conversations
 
-## Quick Installation: Use Our Automation Skill
+## Quick installation: use our automation skill
 
-We have developed a one-click installation skill for Happycapy that can automatically help you configure Memory MCP, Composio MCP, and GitHub Copilot MCP.
+We built a one-click installation skill for Happycapy that automatically configures Memory MCP, Composio MCP, and GitHub Copilot MCP.
 
 <Steps>
-  <Step title="Install the Skill">
+  <Step title="Install the skill">
     In the Happycapy dialog, enter:
     ```
     Install the skill: https://github.com/Y1fe1-Yang/happycapy-mcp-manager
     ```
   </Step>
 
-  <Step title="Run the Skill">
+  <Step title="Run the skill">
     After installation is complete, enter:
     ```
     /happycapy-mcp-manager
@@ -80,11 +80,11 @@ We have developed a one-click installation skill for Happycapy that can automati
 The skill will guide you through all configuration steps, including collecting necessary API Keys, updating configuration files, restarting sessions, etc. For Memory MCP, no credentials are required - just one click to install!
 </Tip>
 
-## Memory MCP: Highly Recommended
+## Memory MCP: highly recommended
 
-Memory MCP is an official knowledge graph storage MCP that can provide persistent memory capabilities for AI. **This is our most recommended MCP!**
+Memory MCP is an official knowledge graph storage MCP that gives AI persistent memory. **This is our most recommended MCP.**
 
-### Why You Need Memory MCP
+### Why you need Memory MCP
 
 <CardGroup cols={3}>
   <Card title="Cross-Session Memory" icon="arrows-rotate">
@@ -100,13 +100,13 @@ Memory MCP is an official knowledge graph storage MCP that can provide persisten
   </Card>
 </CardGroup>
 
-### Memory MCP Usage Examples
+### Memory MCP usage examples
 
-After installing Memory MCP, you can use the following prompts to integrate historical conversation information into the knowledge graph. Choose the appropriate version based on your needs:
+After installing Memory MCP, you can use these prompts to integrate historical conversation information into the knowledge graph. Choose the version that fits your needs:
 
 <AccordionGroup>
-  <Accordion icon="list-check" title="Full Version (suitable for first-time use)">
-    Scan all historical sessions in detail and extract information such as projects, technology stacks, and capability portraits. Suitable for building a complete knowledge graph.
+  <Accordion icon="list-check" title="Full version (for first-time use)">
+    Scan all historical sessions in detail and extract information like projects, technology stacks, and capability portraits. Good for building a complete knowledge graph.
 
     ```
     Integrate all my historical conversation data across the system into the Memory MCP knowledge graph.
@@ -125,8 +125,8 @@ After installing Memory MCP, you can use the following prompts to integrate hist
     ```
   </Accordion>
 
-  <Accordion icon="bolt" title="Simplified Version (recommended)">
-    Quickly extract the core information of historical conversations, suitable for daily use by most users.
+  <Accordion icon="bolt" title="Simplified version (recommended)">
+    Quickly extract the core information of historical conversations. Good for daily use.
 
     ```
     Extract conversation data from all historical sessions on this machine into background knowledge,
@@ -134,8 +134,8 @@ After installing Memory MCP, you can use the following prompts to integrate hist
     ```
   </Accordion>
 
-  <Accordion icon="rabbit-running" title="Quick Version (the simplest)">
-    The simplest and most direct expression, suitable for quick use.
+  <Accordion icon="rabbit-running" title="Quick version (the simplest)">
+    The simplest and most direct. Use this for speed.
 
     ```
     Extract all previous session conversations into memory and store them in the knowledge graph
@@ -144,43 +144,43 @@ After installing Memory MCP, you can use the following prompts to integrate hist
 </AccordionGroup>
 
 <Note>
-Copy the prompt from any of the above code blocks and paste it directly into the dialog box to start using it. Happycapy will automatically scan historical sessions and integrate the information into the Memory MCP knowledge graph.
+Copy any prompt above and paste it into the dialog box. Happycapy will scan historical sessions and integrate the information into the Memory MCP knowledge graph.
 
-**Important**: Conversations after installing Memory will be automatically saved. There is no need to repeat this command. The service is completed within the sandbox - Happycapy will not use any of your information.
+**Important**: After installing Memory, conversations are automatically saved. You don't need to repeat this command. Everything happens in the sandbox. Happycapy doesn't use your information.
 </Note>
 
 ## Integration with GitHub
 
-After connecting to GitHub, Happycapy can help you manage code repositories, create and view Issues, process Pull Requests, view CI/CD status, and more.
+After connecting to GitHub, Happycapy can manage code repositories, create and view Issues, process Pull Requests, view CI/CD status, and more.
 
-### Get GitHub Token
+### Get GitHub token
 
-Token is like a key that allows Happycapy to operate GitHub on your behalf.
+A token is like a key that lets Happycapy operate GitHub on your behalf.
 
 <Steps>
-  <Step title="Open GitHub Token Settings">
+  <Step title="Open GitHub token settings">
     Visit: [https://github.com/settings/tokens](https://github.com/settings/tokens)
 
     Or: GitHub page → avatar in upper right corner → Settings → bottom left Developer Settings → Personal access tokens → Tokens (classic)
   </Step>
 
-  <Step title="Generate New Token">
+  <Step title="Generate new token">
     - Click **"Generate new token"** → select **"Generate new token (classic)"**
     - Fill in **Note** (remarks), such as "Happycapy"
     - Select **"No expiration"** for Expiration (recommended)
     - Select scopes/permissions
   </Step>
 
-  <Step title="Copy and Save Token">
+  <Step title="Copy and save token">
     Click **"Generate token"** at the bottom to generate a string starting with `ghp_`
   </Step>
 </Steps>
 
 <Warning>
-**Important**: Token is only displayed once! Please copy it immediately and save it in a safe place (such as a password manager). Once you close the page, you can no longer see it.
+**Important**: The token is only displayed once. Copy it immediately and save it in a safe place (like a password manager). Once you close the page, it's gone.
 </Warning>
 
-### Recommended Permissions
+### Recommended permissions
 
 <Tip>
 **For beginners**: If you're using it yourself, you can check all the permissions so you don't have to worry!
@@ -191,10 +191,10 @@ Token is like a key that allows Happycapy to operate GitHub on your behalf.
 - `read:org` (read organization)
 </Tip>
 
-### Usage Examples
+### Usage examples
 
 <AccordionGroup>
-  <Accordion icon="folder-plus" title="Create a New Repository">
+  <Accordion icon="folder-plus" title="Create a new repository">
     ```
     Help me create a GitHub repository called my-project
 
@@ -203,7 +203,7 @@ Token is like a key that allows Happycapy to operate GitHub on your behalf.
     ```
   </Accordion>
 
-  <Accordion icon="upload" title="Organize and Submit to Repository">
+  <Accordion icon="upload" title="Organize and submit to repository">
     ```
     Help me organize this conversation into documentation and commit it to my GitHub repository
 
@@ -218,7 +218,7 @@ Token is like a key that allows Happycapy to operate GitHub on your behalf.
     - Return the repository link
   </Accordion>
 
-  <Accordion icon="list" title="View and Manage Issues">
+  <Accordion icon="list" title="View and manage Issues">
     View Issues:
     ```
     Show me the Issues in the my-project repository
@@ -237,7 +237,7 @@ Token is like a key that allows Happycapy to operate GitHub on your behalf.
     ```
   </Accordion>
 
-  <Accordion icon="code-pull-request" title="View Pull Requests">
+  <Accordion icon="code-pull-request" title="View pull requests">
     ```
     Show me pending PRs for my-project
 
@@ -247,51 +247,51 @@ Token is like a key that allows Happycapy to operate GitHub on your behalf.
 </AccordionGroup>
 
 <Tip>
-**Token only needs to be provided once**: In the same conversation, after providing the Token for the first time, there is no need to provide it again for subsequent operations. Happycapy will remember your Token.
+**Provide token once**: In the same conversation, after you provide the token the first time, you don't need to provide it again. Happycapy will remember it.
 </Tip>
 
 ## Integration with Notion
 
-After connecting to Notion, Happycapy can help you read, edit, create Notion pages, automatically organize notes, generate documents, and more.
+After connecting to Notion, Happycapy can read, edit, create Notion pages, organize notes, generate documents, and more.
 
-### Get Notion Token
+### Get Notion token
 
 <Steps>
-  <Step title="Create Notion Integration">
+  <Step title="Create Notion integration">
     Visit: [https://www.notion.so/my-integrations](https://www.notion.so/my-integrations)
 
     Click **"+ New integration"** button
   </Step>
 
-  <Step title="Fill in Integration Information">
+  <Step title="Fill in integration information">
     - **Name**: Just write whatever you want, such as "Happycapy"
     - **Associated workspace**: Choose your workspace
     - **Capabilities**: The default is enough (Read content, Update content, Insert content)
   </Step>
 
-  <Step title="Copy Internal Integration Token">
+  <Step title="Copy internal integration token">
     Once created, copy the **"Internal Integration Token"** (looks like: `ntn_xxxxxxxxxxxx`)
   </Step>
 </Steps>
 
 <Warning>
-**Key step**: After obtaining the Token, you need to authorize the Integration! Continue with the steps below.
+**Key step**: After getting the token, you need to authorize the integration. Continue with the steps below.
 </Warning>
 
-### Give Integration Permission to Access Pages
+### Give integration permission to access pages
 
-This is the most critical step!
+This is the most important step.
 
 <Steps>
-  <Step title="Open Your Notion Page">
+  <Step title="Open your Notion page">
     Open the page you want Happycapy to access
   </Step>
 
-  <Step title="Add Connection">
+  <Step title="Add connection">
     Click the **"···"** button in the upper right corner → Select **"Connections"** → Find your Integration (e.g., "Happycapy")
   </Step>
 
-  <Step title="Confirm Authorization">
+  <Step title="Confirm authorization">
     Click to confirm authorization
   </Step>
 </Steps>
@@ -300,7 +300,7 @@ This is the most critical step!
 Each page you want Happycapy to access requires separate authorization. If the page has subpages, the subpages will inherit permissions.
 </Note>
 
-### Get Page ID
+### Get page ID
 
 To operate on a Notion page, you need to know the page's ID:
 
@@ -337,7 +337,7 @@ Page ID: 3065ab5584b5803e8572fcb253106e5a
 New content: [content you want to add]
 ```
 
-## Related Resources
+## Related resources
 
 <CardGroup cols={2}>
   <Card title="MCP Manager Skill" icon="github" href="https://github.com/Y1fe1-Yang/happycapy-mcp-manager">
