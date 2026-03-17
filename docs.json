@@ -51,7 +51,7 @@
           },
           {
             "group": "Guides",
-            "pages": ["guides/skills", "guides/multi-agent", "guides/mcp", "guides/automations", "integrations/qq-bot"]
+            "pages": ["guides/skills", "guides/multi-agent", "guides/mcp", "guides/automations"]
           },
           {
             "group": "Best Practices",
@@ -72,7 +72,7 @@
           },
           {
             "group": "Community",
-            "pages": ["use-cases/skills-directory", "use-cases/discord-bot-business", "use-cases/telegram-bot", "integrations/contact"]
+            "pages": ["use-cases/qq-bot", "use-cases/skills-directory", "use-cases/discord-bot-business", "use-cases/telegram-bot", "integrations/contact"]
           }
         ]
       },
@@ -85,7 +85,7 @@
           },
           {
             "group": "功能指南",
-            "pages": ["zh/guides/skills", "zh/guides/multi-agent", "zh/guides/mcp", "zh/guides/automations", "zh/integrations/qq-bot"]
+            "pages": ["zh/guides/skills", "zh/guides/multi-agent", "zh/guides/mcp", "zh/guides/automations"]
           },
           {
             "group": "最佳实践",
@@ -106,7 +106,7 @@
           },
           {
             "group": "社区",
-            "pages": ["zh/use-cases/skills-directory", "zh/use-cases/discord-bot-business", "zh/use-cases/telegram-bot", "zh/integrations/contact"]
+            "pages": ["zh/use-cases/qq-bot", "zh/use-cases/skills-directory", "zh/use-cases/discord-bot-business", "zh/use-cases/telegram-bot", "zh/integrations/contact"]
           }
         ]
       },
@@ -119,7 +119,7 @@
           },
           {
             "group": "功能指南",
-            "pages": ["zh-Hant/guides/skills", "zh-Hant/guides/multi-agent", "zh-Hant/guides/mcp", "zh-Hant/guides/automations", "zh-Hant/integrations/qq-bot"]
+            "pages": ["zh-Hant/guides/skills", "zh-Hant/guides/multi-agent", "zh-Hant/guides/mcp", "zh-Hant/guides/automations"]
           },
           {
             "group": "最佳實踐",
@@ -140,7 +140,7 @@
           },
           {
             "group": "社群",
-            "pages": ["zh-Hant/use-cases/skills-directory", "zh-Hant/use-cases/discord-bot-business", "zh-Hant/use-cases/telegram-bot", "zh-Hant/integrations/contact"]
+            "pages": ["zh-Hant/use-cases/qq-bot", "zh-Hant/use-cases/skills-directory", "zh-Hant/use-cases/discord-bot-business", "zh-Hant/use-cases/telegram-bot", "zh-Hant/integrations/contact"]
           }
         ]
       }
