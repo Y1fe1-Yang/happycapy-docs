@@ -1,18 +1,15 @@
 ---
-title: "From Intern to Open-Source — Building a 24/7 Telegram Bot Skill"
-description: "How a Happycapy intern built an open-source Telegram Bot skill with 4-layer fault tolerance, AI conversations, and one-command deployment"
+title: "From idea to open source — building a 24/7 Telegram Bot skill"
+description: "How a Happycapy user built an open-source Telegram Bot skill with 4-layer fault tolerance, AI conversations, and one-command deployment"
 ---
 
 <img src="/images/use-cases/telegram-bot-repo.png" alt="Telegram Bot Skill GitHub repository" style={{ borderRadius: '12px', marginBottom: '24px' }} />
 
 ## Background
 
-**User**: Kita / 喜多 (Happycapy intern, [Lucky-Dog07](https://github.com/Lucky-Dog07))
+A Happycapy user was inspired by another user's Discord Bot article. She decided to build a similar solution for Telegram — but went further by engineering a 4-layer fault tolerance system and open-sourcing everything as an installable Happycapy skill.
 
-Kita is a Happycapy intern who was inspired by gffi's Discord Bot article. She decided to build a similar solution for Telegram — but went further by engineering a 4-layer fault tolerance system and open-sourcing everything as an installable Happycapy skill.
-
-> "The predecessor of this project is gffi's 'Building a 24/7 Discord Bot in Happycapy Sandbox'. The Telegram Bot began by referencing that structure and evolved its own architecture."
-> — Kita
+> "The predecessor of this project is 'Building a 24/7 Discord Bot in Happycapy Sandbox'. The Telegram Bot began by referencing that structure and evolved its own architecture."
 
 ## What she built
 
@@ -30,11 +27,11 @@ An open-source, one-command-setup Telegram bot that runs on Happycapy's sandbox 
 
 ### Key technical difference from Discord
 
-While Discord bots rely on WebSocket connections (requiring discord.js with ~70+ dependencies), Kita's Telegram bot uses **HTTP Long Polling** — native `fetch` API with zero npm dependencies. This makes it lighter and more sandbox-friendly.
+While Discord bots rely on WebSocket connections (requiring discord.js with ~70+ dependencies), this Telegram bot uses **HTTP Long Polling** — native `fetch` API with zero npm dependencies. This makes it lighter and more sandbox-friendly.
 
 ### 4-layer fault tolerance architecture
 
-The bot features a robust 4-layer recovery system, evolved from gffi's 3-layer design:
+The bot features a robust 4-layer recovery system, evolved from the original 3-layer design:
 
 <Steps>
   <Step title="Auto-Recovery Boot Layer">
@@ -80,7 +77,7 @@ Plus two independent systems:
 
 ### Real engineering challenges solved
 
-Kita's article documents the real debugging process — not just the final solution:
+The article documents the real debugging process — not just the final solution:
 
 - **`.bashrc` doesn't work**: Happycapy uses zsh, not bash — had to switch to `.zshenv`
 - **Supervisord config resets**: `/etc/supervisord.conf` is not persistent across reboots — solved with dynamic config generation
@@ -90,7 +87,7 @@ Kita's article documents the real debugging process — not just the final solut
 
 ## An honest take
 
-What makes Kita's write-up stand out is its honesty. She openly states that true 24/7 uptime hasn't been fully achieved — the bot only auto-restarts when a user opens a Happycapy session, not independently. This kind of transparency is valuable for the community.
+What makes this write-up stand out is its honesty. The author openly states that true 24/7 uptime hasn't been fully achieved — the bot only auto-restarts when a user opens a Happycapy session, not independently. This kind of transparency is valuable for the community.
 
 > "Honestly, 7x24 is not yet fully achieved. But the architecture is solid and the auto-recovery works reliably within session scope."
 
@@ -106,7 +103,7 @@ What makes Kita's write-up stand out is its honesty. She openly states that true
   </Card>
 
   <Card title="Standing on Shoulders" icon="users">
-    Built on gffi's Discord Bot work and evolved the architecture further — community knowledge compounds
+    Built on another user's Discord Bot work and evolved the architecture further — community knowledge compounds
   </Card>
 
   <Card title="Transparent Engineering" icon="magnifying-glass">
@@ -115,5 +112,5 @@ What makes Kita's write-up stand out is its honesty. She openly states that true
 </CardGroup>
 
 <Tip>
-Kita's project shows the power of Happycapy's community: one user's blog post (gffi's Discord Bot) inspired an intern to build an improved, open-source version for a different platform. This is how community knowledge compounds — each contribution raises the bar for the next.
+This project shows the power of Happycapy's community: one user's blog post about a Discord Bot inspired another user to build an improved, open-source version for a different platform. This is how community knowledge compounds — each contribution raises the bar for the next.
 </Tip>
